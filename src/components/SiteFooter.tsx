@@ -13,6 +13,9 @@ export function SiteFooter() {
           <Link href="/directory">Directory</Link>
           <Link href="/about">About</Link>
           <Link href="/contact">Submit a tip</Link>
+          <a href="https://trackergb.vercel.app/" target="_blank" rel="noreferrer">
+            Beta Game Tracker
+          </a>
         </div>
       </div>
     </footer>
