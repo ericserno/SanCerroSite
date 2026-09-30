@@ -13,7 +13,6 @@ export function SiteFooter() {
           <Link href="/directory">Directory</Link>
           <Link href="/about">About</Link>
           <Link href="/contact">Submit a tip</Link>
-          <Link href="/suggestions">Site ideas</Link>
         </div>
       </div>
     </footer>

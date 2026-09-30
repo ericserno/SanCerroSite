@@ -94,7 +94,7 @@ img {
 
 .hero {
   position: relative;
-  min-height: 100svh;
+  min-height: min(70svh, 640px);
   display: grid;
   align-items: end;
   overflow: hidden;
@@ -122,14 +122,14 @@ img {
 .hero-copy {
   position: relative;
   z-index: 2;
-  padding: 0 0 4.5rem;
+  padding: 0 0 3.25rem;
   max-width: 34rem;
 }
 
 .hero h1 {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(3.4rem, 10vw, 6.4rem);
+  font-size: clamp(2.8rem, 8vw, 5rem);
   line-height: 0.92;
   letter-spacing: -0.04em;
   font-weight: 650;
@@ -200,25 +200,28 @@ img {
 }
 
 .category-strip {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 0.65rem;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.4rem;
   margin-top: -2.5rem;
   position: relative;
   z-index: 3;
 }
 
 .category-chip {
+  flex: 1 1 0;
+  min-width: 0;
   display: grid;
   place-items: center;
-  min-height: 3.2rem;
-  padding: 0.65rem;
+  min-height: 2.65rem;
+  padding: 0.4rem 0.3rem;
   text-align: center;
   background: color-mix(in oklab, var(--white) 82%, transparent);
   border: 1px solid var(--line);
   backdrop-filter: blur(10px);
   font-weight: 700;
-  font-size: 0.86rem;
+  font-size: clamp(0.68rem, 1.15vw, 0.84rem);
+  line-height: 1.15;
   color: var(--hill);
   transition: background 200ms ease, transform 200ms ease;
 }
@@ -543,13 +546,18 @@ img {
 }
 
 @media (max-width: 900px) {
-  .category-strip,
   .featured-grid,
   .post-grid,
   .event-grid,
   .place-grid,
   .idea-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .category-chip {
+    font-size: 0.68rem;
+    padding: 0.35rem 0.2rem;
+    min-height: 2.4rem;
   }
 }
 
@@ -712,13 +720,29 @@ img {
 }
 
 @media (max-width: 640px) {
-  .category-strip,
   .featured-grid,
   .post-grid,
   .event-grid,
   .place-grid,
   .idea-grid {
     grid-template-columns: 1fr;
+  }
+
+  .category-strip {
+    gap: 0.3rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .category-strip::-webkit-scrollbar {
+    display: none;
+  }
+
+  .category-chip {
+    flex: 1 0 auto;
+    min-width: 4.5rem;
+    font-size: 0.72rem;
   }
 
   .nav-links {
