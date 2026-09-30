@@ -16,7 +16,7 @@ export default function AboutPage() {
           <h1>What is San Cerro?</h1>
           <p>
             San Carlos and Del Cerro are neighboring San Diego communities —
-            family hillsides, short commercial spines, and neighbors who show up
+            family hillsides, local businesses, and neighbors who show up
             for Turkey Trots and school Jog-a-Thons.
           </p>
         </div>

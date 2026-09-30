@@ -52,8 +52,8 @@ export default function HomePage() {
           <div className="section-head reveal">
             <h2>What neighbors are talking about</h2>
             <p>
-              Fresh openings on the boulevard, Thanksgiving morning miles, and the
-              July 4th show that still needs the community behind it.
+              Fresh openings on the boulevard, Thanksgiving morning miles, school events and a
+              July 4th show that may come back one day.
             </p>
           </div>
           <div className="featured-grid">
