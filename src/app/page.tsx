@@ -1,0 +1,104 @@
+import Image from "next/image";
+import Link from "next/link";
+import { FeaturedCard, PostCard } from "@/components/PostCard";
+import { categoryMeta, getFeaturedPosts, getRecentPosts } from "@/content/posts";
+
+export default function HomePage() {
+  const featured = getFeaturedPosts().slice(0, 3);
+  const recent = getRecentPosts(9);
+  const categories = Object.values(categoryMeta);
+
+  return (
+    <>
+      <section className="hero">
+        <div className="hero-media">
+          <Image
+            src="/images/hero-welcome.png"
+            alt="Welcome to San Cerro neighborhood entrance"
+            fill
+            priority
+            sizes="100vw"
+          />
+          <div className="hero-veil" />
+        </div>
+        <div className="shell hero-copy">
+          <h1>San Cerro</h1>
+          <p className="hero-sub">
+            High on San Diego — neighborhood life for San Carlos and Del Cerro.
+          </p>
+          <div className="cta-row">
+            <Link href="/events" className="button button-primary">
+              See events
+            </Link>
+            <Link href="/directory" className="button button-ghost">
+              Local directory
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <div className="shell">
+        <div className="category-strip reveal">
+          {categories.map((cat) => (
+            <Link key={cat.href} href={cat.href} className="category-chip">
+              {cat.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      <section className="section">
+        <div className="shell">
+          <div className="section-head reveal">
+            <h2>What neighbors are talking about</h2>
+            <p>
+              Fresh openings on the boulevard, Thanksgiving morning miles, and the
+              July 4th show that still needs the community behind it.
+            </p>
+          </div>
+          <div className="featured-grid">
+            {featured.map((post, i) => (
+              <div key={post.slug} className={`reveal reveal-delay-${i + 1}`}>
+                <FeaturedCard post={post} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section" style={{ paddingTop: 0 }}>
+        <div className="shell">
+          <div className="section-head reveal">
+            <h2>Most recent</h2>
+            <p>Posts from the original San Cerro site, plus new neighborhood updates.</p>
+          </div>
+          <div className="post-grid">
+            {recent.map((post) => (
+              <PostCard key={post.slug} post={post} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section newsletter">
+        <div className="shell">
+          <div className="section-head">
+            <h2>Stay in touch</h2>
+            <p>
+              Race mornings, school fundraisers, and boulevard openings — send a tip
+              when something’s happening on the hill.
+            </p>
+          </div>
+          <div className="cta-row" style={{ marginTop: "1.25rem" }}>
+            <Link href="/contact" className="button button-primary">
+              Submit a tip
+            </Link>
+            <Link href="/events" className="button button-ghost">
+              Community calendar
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

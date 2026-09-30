@@ -1,0 +1,13 @@
+# San Cerro
+.next
+node_modules
+scraped
+*.log
+.DS_Store
+scrape*.mjs
+retry-assets.mjs
+site-home.html
+data/tips.json
+.env*.local
+.env.local
+npm-install.log
