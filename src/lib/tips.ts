@@ -22,6 +22,12 @@ export type Tip = {
   status: TipStatus;
 };
 
+export type TipFormState = {
+  ok: boolean;
+  message: string;
+  fieldErrors?: Partial<Record<string, string>>;
+};
+
 export const tipCategories: { value: TipCategory; label: string }[] = [
   { value: "opening", label: "Restaurant / store opening" },
   { value: "event", label: "Community event" },

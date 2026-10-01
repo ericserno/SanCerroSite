@@ -60,9 +60,11 @@ function json_(obj) {
    - Who has access: **Anyone**
 5. Authorize when prompted, then copy the web app URL.
 6. In Vercel → Project → Settings → Environment Variables, set:
-   - `GOOGLE_SHEETS_WEBHOOK_URL` = that web app URL
+   - `GOOGLE_SHEETS_WEBHOOK_URL` = that web app URL (**mark as Sensitive**)
    - `GOOGLE_SHEET_ID` = `1Aw_I7okts_kHt_KLqjp-fKzdlVVpU0mZIwXXu-3sJgY` (optional; already the code default)
 7. Redeploy.
+
+The site posts tips to `/api/tips`, which calls your Apps Script URL. A `302` redirect from Apps Script after `doPost` is treated as success.
 
 ## Local testing
 

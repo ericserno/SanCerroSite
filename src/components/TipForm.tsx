@@ -1,14 +1,39 @@
 "use client";
 
-import type { ReactNode } from "react";
-import { useActionState } from "react";
-import { submitTip, type TipFormState } from "@/app/actions/tips";
+import type { FormEvent, ReactNode } from "react";
+import { useState } from "react";
+import type { TipFormState } from "@/lib/tips";
 import { tipCategories } from "@/lib/tips";
 
-const initial: TipFormState = { ok: false, message: "" };
-
 export function TipForm() {
-  const [state, action, pending] = useActionState(submitTip, initial);
+  const [pending, setPending] = useState(false);
+  const [state, setState] = useState<TipFormState>({ ok: false, message: "" });
+
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setPending(true);
+    setState({ ok: false, message: "" });
+
+    try {
+      const form = event.currentTarget;
+      const data = Object.fromEntries(new FormData(form).entries());
+      const res = await fetch("/api/tips", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const json = (await res.json()) as TipFormState;
+      setState(json);
+      if (json.ok) form.reset();
+    } catch {
+      setState({
+        ok: false,
+        message: "Network error — please check your connection and try again.",
+      });
+    } finally {
+      setPending(false);
+    }
+  }
 
   if (state.ok) {
     return (
@@ -21,13 +46,12 @@ export function TipForm() {
   }
 
   return (
-    <form action={action} className="place-block tip-form" noValidate>
+    <form onSubmit={onSubmit} className="place-block tip-form" noValidate>
       <p className="tip-note">
         Tips are reviewed before anything goes live — openings, lost pets, school
         fundraisers, garage sales, and calendar corrections welcome.
       </p>
 
-      {/* Honeypot */}
       <input
         type="text"
         name="website"
