@@ -4,7 +4,7 @@ import { FeaturedCard, PostCard } from "@/components/PostCard";
 import { categoryMeta, getFeaturedPosts, getRecentPosts } from "@/content/posts";
 
 export default function HomePage() {
-  const featured = getFeaturedPosts().slice(0, 3);
+  const featured = getFeaturedPosts();
   const recent = getRecentPosts(9);
   const categories = Object.values(categoryMeta);
 
@@ -52,8 +52,8 @@ export default function HomePage() {
           <div className="section-head reveal">
             <h2>What neighbors are talking about</h2>
             <p>
-              Fresh openings on the boulevard, Thanksgiving morning miles, school events and a
-              July 4th show that may come back one day.
+              Nearby Oktoberfests, a new pizza stop on the boulevard, Thanksgiving
+              morning miles, and a July 4th show that may come back one day.
             </p>
           </div>
           <div className="featured-grid">

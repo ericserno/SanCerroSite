@@ -16,6 +16,8 @@ export type Post = {
   excerpt: string;
   image: string;
   featured?: boolean;
+  /** Lower numbers appear first in “What neighbors are talking about.” */
+  featuredOrder?: number;
   archived?: boolean;
   body: string[];
 };
@@ -70,6 +72,40 @@ export const categoryMeta: Record<
 
 export const posts: Post[] = [
   {
+    slug: "el-cajon-oktoberfest-2026",
+    title: "El Cajon Oktoberfest returns for two weekends",
+    date: "2026-09-25",
+    category: "events",
+    categoryLabel: "Events",
+    excerpt:
+      "German food, bier, music, and Kid Zone fun at 1017 S. Mollison — Sept 25–27 and Oct 2–4.",
+    image: "/images/el-cajon-oktoberfest.jpg",
+    featured: true,
+    featuredOrder: 1,
+    body: [
+      "Oktoberfest in El Cajon, hosted by the German American Societies of San Diego, runs two weekends in 2026: September 25–27 and October 2–4 at 1017 S. Mollison Ave.",
+      "Expect bratwurst, ox-on-the-spit, pretzels, German bier, folk dancing, contests, shopping booths, and a Kid Zone. Typical hours are Fridays 4–10pm, Saturdays 12–10pm, and Sundays 12–9pm. Adult admission is usually $15 Fridays/Saturdays and $5 Sundays; under 21 and active military are free.",
+      "Details and listings: https://www.falkorevents.com/eventcal/event/6829/details/ — also see germanclubsandiego.com for club updates.",
+    ],
+  },
+  {
+    slug: "la-mesa-oktoberfest-2026",
+    title: "La Mesa Oktoberfest hits the boulevard",
+    date: "2026-10-02",
+    category: "events",
+    categoryLabel: "Events",
+    excerpt:
+      "Free all-ages fest on La Mesa Blvd — Oct 2–4, with biergarten entry and VIP packages at the door.",
+    image: "/images/la-mesa-oktoberfest.jpg",
+    featured: true,
+    featuredOrder: 2,
+    body: [
+      "La Mesa Oktoberfest brings Bavarian festivities to La Mesa Blvd for its 53rd anniversary weekend: Friday, Oct 2 (4–10pm), Saturday, Oct 3 (10am–10pm), and Sunday, Oct 4 (12–8pm).",
+      "The street festival is free and all ages. Biergarten entry is about $8 at the door (under 21 free), with Hofbräuhaus VIP packages available. Think German bier, food, games, dancing, dachshund races, and kids’ activities.",
+      "More info and VIP options: https://www.lamesaoktoberfest.org/",
+    ],
+  },
+  {
     slug: "del-cerro-pizza-and-beer-opens",
     title: "Del Cerro Pizza & Beer opens on the boulevard",
     date: "2024-12-02",
@@ -79,6 +115,7 @@ export const posts: Post[] = [
       "NY-style pies and beer on tap land in the old El Torry space at Windmill Farms plaza.",
     image: "/images/del-cerro-pizza-storefront.webp",
     featured: true,
+    featuredOrder: 3,
     body: [
       "Del Cerro Pizza & Beer opened December 2, 2024 at 6358 Del Cerro Boulevard — the Windmill Farms plaza space that previously housed El Torry.",
       "Co-owners Zee and Sadeer bring New York-style pies meant to fold, plus wings, garlic knots, salads, and beer on tap. The dining room and patio make it an easy walk-over for neighbors who already treat Del Cerro Boulevard as the neighborhood living room.",
@@ -95,6 +132,7 @@ export const posts: Post[] = [
       "Thanksgiving morning 5K — run, walk, bike, or scoot. Bring a canned good for the Food Bank.",
     image: "/images/turkey-trot-2025.png",
     featured: true,
+    featuredOrder: 4,
     body: [
       "Join us Thanksgiving morning for the San Cerro Turkey Trot — a neighborhood 5K you can run, walk, bike, or scoot.",
       "The course starts and ends at the corner of Wandermere Drive and Belle Glade Avenue. Arrive by 8:00; the race begins at 8:30.",
@@ -112,6 +150,7 @@ export const posts: Post[] = [
       "The beloved lakeside show stayed dark in 2025. Neighbors are still the only path to a return.",
     image: "/images/bridges.jpg",
     featured: true,
+    featuredOrder: 5,
     body: [
       "The Lake Murray Fireworks and Music Festival — long a July 4th anchor for San Carlos, Del Cerro, and the wider Navajo community — was canceled in 2025 after permit costs spiked and fireworks restrictions tightened.",
       "Organizers described a volunteer-run nonprofit stretched thin: higher city fees, retiring long-time board members, and pressure to shift toward a drone show that would cost even more.",
@@ -266,7 +305,9 @@ export function getPostsByCategory(category: Category) {
 }
 
 export function getFeaturedPosts() {
-  return posts.filter((p) => p.featured).sort((a, b) => b.date.localeCompare(a.date));
+  return posts
+    .filter((p) => p.featured)
+    .sort((a, b) => (a.featuredOrder ?? 99) - (b.featuredOrder ?? 99));
 }
 
 export function getRecentPosts(limit = 9) {

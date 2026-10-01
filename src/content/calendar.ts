@@ -27,6 +27,32 @@ export type CalendarEvent = {
  */
 export const calendarEvents: CalendarEvent[] = [
   {
+    id: "el-cajon-oktoberfest-2026",
+    title: "El Cajon Oktoberfest",
+    summary:
+      "Two weekends of German food, bier, music, and Kid Zone fun hosted by the German American Societies of San Diego. Fri 4–10pm, Sat 12–10pm, Sun 12–9pm.",
+    where: "1017 S. Mollison Ave, El Cajon",
+    start: "2026-09-25T16:00:00",
+    end: "2026-10-04T21:00:00",
+    href: "https://www.falkorevents.com/eventcal/event/6829/details/",
+    status: "upcoming",
+    category: "community",
+    ics: true,
+  },
+  {
+    id: "la-mesa-oktoberfest-2026",
+    title: "La Mesa Oktoberfest",
+    summary:
+      "Free all-ages festival on La Mesa Blvd. Biergarten entry ~$8 at the door; VIP packages available. Fri 4–10pm, Sat 10am–10pm, Sun 12–8pm.",
+    where: "La Mesa Blvd, La Mesa, CA 91942",
+    start: "2026-10-02T16:00:00",
+    end: "2026-10-04T20:00:00",
+    href: "https://www.lamesaoktoberfest.org/",
+    status: "upcoming",
+    category: "community",
+    ics: true,
+  },
+  {
     id: "turkey-trot-2026",
     title: "San Cerro Turkey Trot",
     summary:
