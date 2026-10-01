@@ -131,8 +131,6 @@ export const posts: Post[] = [
     excerpt:
       "Thanksgiving morning 5K — run, walk, bike, or scoot. Bring a canned good for the Food Bank.",
     image: "/images/turkey-trot-2025.png",
-    featured: true,
-    featuredOrder: 4,
     body: [
       "Join us Thanksgiving morning for the San Cerro Turkey Trot — a neighborhood 5K you can run, walk, bike, or scoot.",
       "The course starts and ends at the corner of Wandermere Drive and Belle Glade Avenue. Arrive by 8:00; the race begins at 8:30.",
@@ -149,8 +147,6 @@ export const posts: Post[] = [
     excerpt:
       "The beloved lakeside show stayed dark in 2025. Neighbors are still the only path to a return.",
     image: "/images/bridges.jpg",
-    featured: true,
-    featuredOrder: 5,
     body: [
       "The Lake Murray Fireworks and Music Festival — long a July 4th anchor for San Carlos, Del Cerro, and the wider Navajo community — was canceled in 2025 after permit costs spiked and fireworks restrictions tightened.",
       "Organizers described a volunteer-run nonprofit stretched thin: higher city fees, retiring long-time board members, and pressure to shift toward a drone show that would cost even more.",
