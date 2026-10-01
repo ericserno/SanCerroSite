@@ -1,6 +1,11 @@
 import type { Tip } from "@/lib/tips";
 import { tipCategories } from "@/lib/tips";
 
+/** San Cerro tips spreadsheet */
+export const TIPS_SHEET_ID =
+  process.env.GOOGLE_SHEET_ID ||
+  "1Aw_I7okts_kHt_KLqjp-fKzdlVVpU0mZIwXXu-3sJgY";
+
 function categoryLabel(value: Tip["category"]) {
   return tipCategories.find((c) => c.value === value)?.label ?? value;
 }
@@ -10,7 +15,7 @@ export type NotifyResult = {
   error?: string;
 };
 
-/** Append tip to a Google Sheet via Apps Script webhook. */
+/** Append tip to the San Cerro Google Sheet via Apps Script webhook. */
 export async function notifyTip(tip: Tip): Promise<NotifyResult> {
   const url = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
   if (!url) return { sheet: "skipped" };
@@ -21,8 +26,11 @@ export async function notifyTip(tip: Tip): Promise<NotifyResult> {
     const res = await fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
+      // Apps Script web apps often need follow redirects for POST→GET
+      redirect: "follow",
       body: JSON.stringify({
         secret: secret || undefined,
+        spreadsheetId: TIPS_SHEET_ID,
         tip: {
           id: tip.id,
           createdAt: tip.createdAt,

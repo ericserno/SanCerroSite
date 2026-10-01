@@ -1,29 +1,34 @@
 # Tip delivery — Google Sheet
 
-On Vercel, each tip from `/contact` is appended to a Google Sheet via an Apps Script web app.
+Tips from `/contact` append a row to this spreadsheet:
 
-## Setup
+https://docs.google.com/spreadsheets/d/1Aw_I7okts_kHt_KLqjp-fKzdlVVpU0mZIwXXu-3sJgY/edit
 
-1. Create a Google Sheet. Put headers in row 1:
+Google does not allow a Vercel app to write that sheet directly without a bridge. Use the Apps Script web app below (one-time setup).
+
+## One-time setup (do this on the tips sheet)
+
+1. Open the sheet above.
+2. Put headers in row 1 if they are missing:
 
    `Submitted At | Tip ID | Status | Category | Headline | Name | Email | Location | When | Details`
 
-2. **Extensions → Apps Script**. Delete the stub and paste:
+3. **Extensions → Apps Script**. Replace everything with:
 
 ```javascript
-const EXPECTED_SECRET = ""; // optional: same value as GOOGLE_SHEETS_WEBHOOK_SECRET
+const SHEET_ID = "1Aw_I7okts_kHt_KLqjp-fKzdlVVpU0mZIwXXu-3sJgY";
+const EXPECTED_SECRET = ""; // optional: match GOOGLE_SHEETS_WEBHOOK_SECRET in Vercel
 
 function doPost(e) {
   try {
     const data = JSON.parse(e.postData.contents);
     if (EXPECTED_SECRET && data.secret !== EXPECTED_SECRET) {
-      return ContentService
-        .createTextOutput(JSON.stringify({ ok: false, error: "unauthorized" }))
-        .setMimeType(ContentService.MimeType.JSON);
+      return json_({ ok: false, error: "unauthorized" });
     }
 
     const tip = data.tip || {};
-    const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
+    const id = data.spreadsheetId || SHEET_ID;
+    const sheet = SpreadsheetApp.openById(id).getSheets()[0];
     sheet.appendRow([
       tip.createdAt || new Date().toISOString(),
       tip.id || "",
@@ -37,30 +42,34 @@ function doPost(e) {
       tip.details || "",
     ]);
 
-    return ContentService
-      .createTextOutput(JSON.stringify({ ok: true }))
-      .setMimeType(ContentService.MimeType.JSON);
+    return json_({ ok: true });
   } catch (err) {
-    return ContentService
-      .createTextOutput(JSON.stringify({ ok: false, error: String(err) }))
-      .setMimeType(ContentService.MimeType.JSON);
+    return json_({ ok: false, error: String(err) });
   }
+}
+
+function json_(obj) {
+  return ContentService
+    .createTextOutput(JSON.stringify(obj))
+    .setMimeType(ContentService.MimeType.JSON);
 }
 ```
 
-3. **Deploy → New deployment → Web app**
+4. **Deploy → New deployment → Web app**
    - Execute as: **Me**
    - Who has access: **Anyone**
-4. Copy the web app URL into Vercel as `GOOGLE_SHEETS_WEBHOOK_URL`.
-5. (Optional) Set the same string in the script’s `EXPECTED_SECRET` and in Vercel as `GOOGLE_SHEETS_WEBHOOK_SECRET`.
-6. Redeploy the site.
+5. Authorize when prompted, then copy the web app URL.
+6. In Vercel → Project → Settings → Environment Variables, set:
+   - `GOOGLE_SHEETS_WEBHOOK_URL` = that web app URL
+   - `GOOGLE_SHEET_ID` = `1Aw_I7okts_kHt_KLqjp-fKzdlVVpU0mZIwXXu-3sJgY` (optional; already the code default)
+7. Redeploy.
 
 ## Local testing
 
 ```bash
 cp .env.example .env.local
-# paste the web app URL
+# paste GOOGLE_SHEETS_WEBHOOK_URL=
 npm run dev
 ```
 
-Submit a tip at `/contact` and confirm a new row appears in the sheet.
+Submit a tip at `/contact` and confirm a new row on the sheet.

@@ -24,10 +24,6 @@ export const metadata: Metadata = {
   },
   description:
     "Neighborhood news, events, and local business for San Carlos and Del Cerro — San Cerro.",
-  icons: {
-    icon: "/images/favicon.ico",
-    apple: "/images/webclip.png",
-  },
 };
 
 export default function RootLayout({

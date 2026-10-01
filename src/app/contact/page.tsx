@@ -19,7 +19,7 @@ export default function ContactPage() {
           <p>
             Tell neighbors about openings, school fundraisers, garage sales, lost
             pets, or calendar corrections. Tips are moderated before anything goes
-            live — on Vercel they land in your Google Sheet.
+            live — on Vercel each tip adds a row to the San Cerro Google Sheet.
           </p>
         </div>
       </section>
