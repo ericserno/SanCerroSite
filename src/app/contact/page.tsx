@@ -4,7 +4,7 @@ import { TipForm } from "@/components/TipForm";
 export const metadata: Metadata = {
   title: "Submit a tip",
   description:
-    "Send a neighborhood tip — openings, events, lost pets, fundraisers, and corrections. Moderated before publishing.",
+    "Send a neighborhood tip — openings, events, fundraisers, and corrections. Moderated before publishing.",
 };
 
 export default function ContactPage() {
@@ -17,9 +17,9 @@ export default function ContactPage() {
           </span>
           <h1>Submit a tip</h1>
           <p>
-            Tell neighbors about openings, school fundraisers, garage sales, lost
-            pets, or calendar corrections. Tips are moderated before anything goes
-            live — on Vercel each tip adds a row to the San Cerro Google Sheet.
+            Tell neighbors about openings, school fundraisers, or calendar
+            corrections. Tips are moderated before anything goes live —
+            on Vercel each tip adds a row to the San Cerro Google Sheet.
           </p>
         </div>
       </section>

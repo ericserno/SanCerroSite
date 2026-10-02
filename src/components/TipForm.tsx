@@ -48,8 +48,8 @@ export function TipForm() {
   return (
     <form onSubmit={onSubmit} className="place-block tip-form" noValidate>
       <p className="tip-note">
-        Tips are reviewed before anything goes live — openings, lost pets, school
-        fundraisers, garage sales, and calendar corrections welcome.
+        Tips are reviewed before anything goes live — openings, school
+        fundraisers, and calendar corrections welcome.
       </p>
 
       <input

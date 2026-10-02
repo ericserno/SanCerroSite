@@ -1,9 +1,7 @@
 export type TipCategory =
   | "opening"
   | "event"
-  | "lost-pet"
   | "fundraiser"
-  | "garage-sale"
   | "correction"
   | "other";
 
@@ -31,9 +29,7 @@ export type TipFormState = {
 export const tipCategories: { value: TipCategory; label: string }[] = [
   { value: "opening", label: "Restaurant / store opening" },
   { value: "event", label: "Community event" },
-  { value: "lost-pet", label: "Lost or found pet" },
   { value: "fundraiser", label: "School / neighborhood fundraiser" },
-  { value: "garage-sale", label: "Garage sale weekend" },
   { value: "correction", label: "Correction to the site" },
   { value: "other", label: "Something else" },
 ];
