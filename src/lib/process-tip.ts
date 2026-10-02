@@ -90,6 +90,11 @@ export async function processTipSubmission(
         ok: false,
         message:
           "We could not save that tip right now. Please try again in a minute.",
+        fieldErrors: {
+          details: delivery.error
+            ? `Sheet bridge: ${delivery.error.slice(0, 180)}`
+            : "Sheet bridge did not confirm the write.",
+        },
       };
     }
   }

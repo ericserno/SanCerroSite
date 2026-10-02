@@ -30,7 +30,9 @@ function doPost(e) {
 
     const tip = data.tip || {};
     const id = data.spreadsheetId || SHEET_ID;
-    const sheet = SpreadsheetApp.openById(id).getSheets()[0];
+    // Prefer the bound spreadsheet when this script lives on the tips sheet
+    const ss = SpreadsheetApp.getActiveSpreadsheet() || SpreadsheetApp.openById(id);
+    const sheet = ss.getSheets()[0];
     sheet.appendRow([
       tip.createdAt || new Date().toISOString(),
       tip.id || "",
@@ -45,6 +47,16 @@ function doPost(e) {
     ]);
 
     return json_({ ok: true });
+  } catch (err) {
+    return json_({ ok: false, error: String(err) });
+  }
+}
+
+// Visit the /exec URL in a browser — should show {"ok":true,"sheet":"..."}
+function doGet() {
+  try {
+    const ss = SpreadsheetApp.getActiveSpreadsheet() || SpreadsheetApp.openById(SHEET_ID);
+    return json_({ ok: true, sheet: ss.getName() });
   } catch (err) {
     return json_({ ok: false, error: String(err) });
   }
