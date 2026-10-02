@@ -3,6 +3,9 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About",
+  description:
+    "What is San Cerro? San Carlos and Del Cerro are neighboring San Diego communities — family hillsides, local businesses, Lake Murray, and neighbors who show up.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {

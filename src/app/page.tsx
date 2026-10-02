@@ -1,7 +1,19 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { FeaturedCard, PostCard } from "@/components/PostCard";
+import { JsonLd } from "@/components/JsonLd";
 import { categoryMeta, getFeaturedPosts, getRecentPosts } from "@/content/posts";
+import { webPageJsonLd } from "@/lib/structured-data";
+import { siteConfig } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: `${siteConfig.name} — ${siteConfig.tagline}`,
+  },
+  description: siteConfig.description,
+  alternates: { canonical: "/" },
+};
 
 export default function HomePage() {
   const featured = getFeaturedPosts();
@@ -10,6 +22,13 @@ export default function HomePage() {
 
   return (
     <>
+      <JsonLd
+        data={webPageJsonLd({
+          title: `${siteConfig.name} — ${siteConfig.tagline}`,
+          description: siteConfig.description,
+          path: "/",
+        })}
+      />
       <section className="hero">
         <div className="hero-media">
           <Image

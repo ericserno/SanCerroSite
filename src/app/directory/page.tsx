@@ -1,14 +1,36 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { places } from "@/content/directory";
+import { JsonLd } from "@/components/JsonLd";
+import { directoryJsonLd, webPageJsonLd } from "@/lib/structured-data";
+
+const directoryDescription =
+  "Local directory for San Carlos and Del Cerro — Del Cerro Pizza & Beer, Windmill Farms, Mission Trails, Lake Murray, schools, and boulevard staples.";
 
 export const metadata: Metadata = {
   title: "Directory",
+  description: directoryDescription,
+  alternates: { canonical: "/directory" },
+  openGraph: {
+    title: "San Cerro directory",
+    description: directoryDescription,
+    url: "/directory",
+  },
 };
 
 export default function DirectoryPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          webPageJsonLd({
+            title: "San Cerro directory",
+            description: directoryDescription,
+            path: "/directory",
+          }),
+          directoryJsonLd(places),
+        ]}
+      />
       <section className="page-hero">
         <div className="shell">
           <span className="eyebrow" style={{ color: "#c9dce6" }}>

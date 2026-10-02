@@ -4,6 +4,9 @@ import { categoryMeta } from "@/content/posts";
 
 export const metadata: Metadata = {
   title: "Categories",
+  description:
+    "Browse San Cerro posts by topic — events, food and drink, local business, school, community, and recreation in San Carlos and Del Cerro.",
+  alternates: { canonical: "/categories" },
 };
 
 export default function CategoriesIndexPage() {

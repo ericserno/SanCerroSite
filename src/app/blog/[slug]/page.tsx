@@ -2,22 +2,53 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { JsonLd } from "@/components/JsonLd";
 import { getPost, posts } from "@/content/posts";
+import { blogPostingJsonLd } from "@/lib/structured-data";
+import { siteConfig } from "@/lib/site";
 
 export function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  return params.then(({ slug }) => {
-    const post = getPost(slug);
-    if (!post) return { title: "Post" };
-    return { title: post.title, description: post.excerpt };
-  });
+  const { slug } = await params;
+  const post = getPost(slug);
+  if (!post) return { title: "Post" };
+
+  const url = `/blog/${post.slug}`;
+  return {
+    title: post.title,
+    description: post.excerpt,
+    alternates: { canonical: url },
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.excerpt,
+      url,
+      publishedTime: post.date,
+      modifiedTime: post.date,
+      section: post.categoryLabel,
+      tags: [post.categoryLabel, "San Cerro", "San Carlos", "Del Cerro"],
+      images: [
+        {
+          url: post.image,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [post.image],
+    },
+    authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  };
 }
 
 export default async function BlogPostPage({
@@ -31,6 +62,7 @@ export default async function BlogPostPage({
 
   return (
     <>
+      <JsonLd data={blogPostingJsonLd(post)} />
       <section className="page-hero">
         <div className="shell">
           <span className="eyebrow" style={{ color: "#c9dce6" }}>
@@ -52,21 +84,21 @@ export default async function BlogPostPage({
           <div className="article-hero-image">
             <Image
               src={post.image}
-              alt=""
+              alt={`${post.title} — San Cerro`}
               fill
               className="object-cover"
               sizes="(max-width: 900px) 100vw, 1120px"
               priority
             />
           </div>
-          <div className="prose">
+          <article className="prose">
             {post.body.map((paragraph) => (
               <p key={paragraph.slice(0, 32)}>{paragraph}</p>
             ))}
             <p>
               <Link href="/">← Back home</Link>
             </p>
-          </div>
+          </article>
         </div>
       </section>
     </>

@@ -33,9 +33,11 @@ export function generateMetadata({
   return params.then(({ slug }) => {
     const key = aliases[slug];
     if (!key) return { title: "Category" };
+    const meta = categoryMeta[key];
     return {
-      title: categoryMeta[key].label,
-      description: categoryMeta[key].description,
+      title: meta.label,
+      description: `${meta.description} San Carlos and Del Cerro neighborhood coverage from San Cerro.`,
+      alternates: { canonical: meta.href },
     };
   });
 }

@@ -4,7 +4,8 @@ import { TipForm } from "@/components/TipForm";
 export const metadata: Metadata = {
   title: "Submit a tip",
   description:
-    "Send a neighborhood tip — openings, events, fundraisers, and corrections. Moderated before publishing.",
+    "Send a San Cerro neighborhood tip for San Carlos or Del Cerro — openings, events, fundraisers, and corrections. Moderated before publishing.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

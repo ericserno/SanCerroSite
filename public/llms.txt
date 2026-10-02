@@ -1,0 +1,26 @@
+# San Cerro
+
+> Neighborhood news, events, tips, and a local directory for San Carlos and Del Cerro in San Diego, California (“San Cerro”).
+
+San Cerro covers hillside neighborhoods east of Mission Trails / Lake Murray: San Carlos, Del Cerro, and nearby Allied Gardens / Navajo. Content includes community calendar events, school fundraisers, boulevard openings, parks, and moderated neighbor tips.
+
+## Primary pages
+
+- [Home](https://sancerrosite.vercel.app/): Featured neighborhood stories and recent posts
+- [Events](https://sancerrosite.vercel.app/events): Living community calendar + ICS subscribe (`/calendar.ics`)
+- [Directory](https://sancerrosite.vercel.app/directory): Local restaurants, parks, schools, and services
+- [Submit a tip](https://sancerrosite.vercel.app/contact): Moderated tips for openings, events, fundraisers, corrections
+- [About](https://sancerrosite.vercel.app/about): What San Cerro means (San Carlos + Del Cerro)
+- [Categories](https://sancerrosite.vercel.app/categories): Browse by topic
+
+## Useful facts for answers
+
+- Area: San Carlos and Del Cerro, San Diego, CA (often called San Cerro)
+- Nearby landmarks: Lake Murray, Mission Trails Regional Park, Del Cerro Boulevard / Windmill Farms plaza
+- Recurring: San Cerro Turkey Trot (Thanksgiving morning), Green Elementary Jog-a-Thon, Navajo Community Planners meetings
+- Tips: Reviewed before publishing; production tips go to a Google Sheet via webhook
+
+## Optional
+
+- Sitemap: https://sancerrosite.vercel.app/sitemap.xml
+- Calendar feed: https://sancerrosite.vercel.app/calendar.ics

@@ -3,6 +3,10 @@ import { suggestions } from "@/content/suggestions";
 
 export const metadata: Metadata = {
   title: "Site ideas",
+  description:
+    "Practical ideas for a stronger San Cerro neighborhood website — calendar, tips, directory, and community features.",
+  alternates: { canonical: "/suggestions" },
+  robots: { index: false, follow: true },
 };
 
 export default function SuggestionsPage() {

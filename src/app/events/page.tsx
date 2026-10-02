@@ -6,11 +6,21 @@ import {
   getUpcomingEvents,
   type CalendarStatus,
 } from "@/content/calendar";
+import { JsonLd } from "@/components/JsonLd";
+import { eventListJsonLd, webPageJsonLd } from "@/lib/structured-data";
+
+const eventsDescription =
+  "Living San Cerro community calendar for San Carlos and Del Cerro — Oktoberfest, Bulls Only Rodeo, Turkey Trot, school fundraisers, Mission Trails events, and ICS subscribe.";
 
 export const metadata: Metadata = {
   title: "Events",
-  description:
-    "Living San Cerro community calendar — Turkey Trot, school fundraisers, planners meetings, and ICS subscribe.",
+  description: eventsDescription,
+  alternates: { canonical: "/events" },
+  openGraph: {
+    title: "Neighborhood events · San Cerro",
+    description: eventsDescription,
+    url: "/events",
+  },
 };
 
 export default function EventsPage() {
@@ -19,6 +29,16 @@ export default function EventsPage() {
 
   return (
     <>
+      <JsonLd
+        data={[
+          webPageJsonLd({
+            title: "Neighborhood events",
+            description: eventsDescription,
+            path: "/events",
+          }),
+          ...eventListJsonLd(upcoming.filter((e) => e.status !== "needs-support")),
+        ]}
+      />
       <section className="page-hero">
         <div className="shell">
           <span className="eyebrow" style={{ color: "#c9dce6" }}>
