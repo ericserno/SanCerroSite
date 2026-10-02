@@ -80,6 +80,26 @@ export const places: Place[] = [
     status: "staple",
   },
   {
+    name: "Pershing Middle School",
+    kind: "school",
+    address: "8204 San Carlos Dr, San Diego, CA 92119",
+    blurb:
+      "Local middle school and Turkey Trot food-drive drop partner for the San Diego Food Bank.",
+    href: "https://pershing.sandiegounified.org/",
+    phone: "(619) 362-3550",
+    status: "staple",
+  },
+  {
+    name: "San Carlos Recreation Center",
+    kind: "service",
+    address: "6445 Lake Badin Ave, San Diego, CA 92119",
+    blurb:
+      "City rec hub for classes, permits, and neighborhood programs — register via SDRecConnect.",
+    href: "https://www.sandiego.gov/park-and-recreation/centers/recctr/sancarlos",
+    phone: "(619) 527-3443",
+    status: "staple",
+  },
+  {
     name: "Princess Del Cerro Park",
     kind: "park",
     address: "Del Cerro, San Diego, CA 92120",
@@ -92,6 +112,26 @@ export const places: Place[] = [
     address: "San Carlos side of Lake Murray",
     blurb:
       "Trails, playground, and the historic home of the July 4th music fest.",
+    status: "staple",
+  },
+  {
+    name: "Mission Trails Regional Park",
+    kind: "park",
+    address: "One Father Junipero Serra Trail, San Diego, CA 92119",
+    blurb:
+      "8,000-acre park next door — visitor center, trails, Kumeyaay Lake programs, and seasonal marketplace.",
+    href: "https://mtrp.org/",
+    phone: "(619) 668-3281",
+    status: "staple",
+  },
+  {
+    name: "Santee Lakes",
+    kind: "park",
+    address: "9310 Fanita Pkwy, Santee, CA 92071",
+    blurb:
+      "Fishing, camping, markets, and family events like Spooktacular — a short drive east of San Cerro.",
+    href: "https://www.santeelakes.com/",
+    phone: "(619) 596-3141",
     status: "staple",
   },
 ];
