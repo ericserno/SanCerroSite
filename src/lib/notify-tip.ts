@@ -15,9 +15,35 @@ export type NotifyResult = {
   error?: string;
 };
 
+function looksLikeGoogleLogin(url: string | null) {
+  if (!url) return false;
+  return /accounts\.google\.com|ServiceLogin|signin/i.test(url);
+}
+
+async function readBody(res: Response) {
+  try {
+    return await res.text();
+  } catch {
+    return "";
+  }
+}
+
+function bodyLooksSuccessful(body: string) {
+  if (!body) return false;
+  try {
+    const json = JSON.parse(body) as { ok?: boolean };
+    return json.ok === true;
+  } catch {
+    // Some deployments return empty bodies after a real append.
+    return false;
+  }
+}
+
 /**
  * Append tip via Apps Script web app.
- * Apps Script often responds with 302 after a successful doPost; treat that as success.
+ * Google often responds to doPost with a 302 to a one-time content URL.
+ * We follow that redirect and require an ok payload (or a non-login redirect
+ * plus empty body only when explicitly allowed).
  */
 export async function notifyTip(tip: Tip): Promise<NotifyResult> {
   const url = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
@@ -43,27 +69,54 @@ export async function notifyTip(tip: Tip): Promise<NotifyResult> {
   });
 
   try {
-    const res = await fetch(url, {
+    const first = await fetch(url, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
       redirect: "manual",
       body: payload,
     });
 
-    // 200–299 success, or 302/303 from Apps Script after doPost runs
-    if (
-      res.ok ||
-      res.status === 302 ||
-      res.status === 303 ||
-      res.status === 301
-    ) {
-      return { sheet: "appended" };
+    // Direct 200 with JSON
+    if (first.status >= 200 && first.status < 300) {
+      const body = await readBody(first);
+      if (bodyLooksSuccessful(body) || body.includes('"ok":true')) {
+        return { sheet: "appended" };
+      }
+      return {
+        sheet: "failed",
+        error: `Sheet webhook returned ${first.status} without ok: ${body.slice(0, 200)}`,
+      };
     }
 
-    const body = await res.text().catch(() => "");
+    // Apps Script success path: 302 to script.googleusercontent.com
+    if (first.status === 302 || first.status === 303 || first.status === 301) {
+      const location = first.headers.get("location");
+      if (!location || looksLikeGoogleLogin(location)) {
+        return {
+          sheet: "failed",
+          error:
+            "Sheet webhook redirected to Google login — redeploy the Apps Script web app with access Anyone and use the /exec URL.",
+        };
+      }
+
+      const second = await fetch(location, { method: "GET", redirect: "follow" });
+      const body = await readBody(second);
+      if (bodyLooksSuccessful(body) || body.includes('"ok":true')) {
+        return { sheet: "appended" };
+      }
+
+      // If redirect host is googleusercontent and body empty, doPost may have run;
+      // still fail closed so we do not report false success.
+      return {
+        sheet: "failed",
+        error: `Sheet webhook redirect did not confirm ok (${second.status}): ${body.slice(0, 200)}`,
+      };
+    }
+
+    const body = await readBody(first);
     return {
       sheet: "failed",
-      error: `Sheet webhook failed (${res.status}): ${body.slice(0, 200)}`,
+      error: `Sheet webhook failed (${first.status}): ${body.slice(0, 200)}`,
     };
   } catch (err) {
     return {

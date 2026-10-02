@@ -21,7 +21,9 @@ const EXPECTED_SECRET = ""; // optional: match GOOGLE_SHEETS_WEBHOOK_SECRET in V
 
 function doPost(e) {
   try {
-    const data = JSON.parse(e.postData.contents);
+    // Accept JSON posts (including text/plain bodies from the site)
+    const raw = (e && e.postData && e.postData.contents) || "{}";
+    const data = JSON.parse(raw);
     if (EXPECTED_SECRET && data.secret !== EXPECTED_SECRET) {
       return json_({ ok: false, error: "unauthorized" });
     }
@@ -64,7 +66,15 @@ function json_(obj) {
    - `GOOGLE_SHEET_ID` = `1Aw_I7okts_kHt_KLqjp-fKzdlVVpU0mZIwXXu-3sJgY` (optional; already the code default)
 7. Redeploy.
 
-The site posts tips to `/api/tips`, which calls your Apps Script URL. A `302` redirect from Apps Script after `doPost` is treated as success.
+The site posts tips to `/api/tips`, which calls your Apps Script URL. A successful write must return JSON like `{"ok":true}` (the app follows Apps Script’s redirect and checks that body).
+
+### If tips don’t appear in the sheet
+
+1. Confirm the Vercel env value is the **`/exec`** web app URL (not `/dev`).
+2. Redeploy the Apps Script after pasting the script above (**New deployment**).
+3. Access must be **Anyone**.
+4. In Apps Script → **Executions**, check whether `doPost` ran when you submitted a tip.
+5. Submit again on the live site — if the webhook is wrong you’ll now see an error instead of a fake success.
 
 ## Local testing
 
