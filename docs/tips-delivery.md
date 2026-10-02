@@ -29,8 +29,12 @@ function doPost(e) {
     }
 
     const tip = data.tip || {};
-    const id = data.spreadsheetId || SHEET_ID;
-    // Prefer the bound spreadsheet when this script lives on the tips sheet
+    // Prefer the bound spreadsheet; never trust a placeholder id from env
+    const requested = data.spreadsheetId;
+    const id =
+      requested && requested !== "GOOGLE_SHEET_ID" && String(requested).length > 20
+        ? requested
+        : SHEET_ID;
     const ss = SpreadsheetApp.getActiveSpreadsheet() || SpreadsheetApp.openById(id);
     const sheet = ss.getSheets()[0];
     sheet.appendRow([
@@ -85,8 +89,10 @@ The site posts tips to `/api/tips`, which calls your Apps Script URL. A successf
 1. Confirm the Vercel env value is the **`/exec`** web app URL (not `/dev`).
 2. Redeploy the Apps Script after pasting the script above (**New deployment**).
 3. Access must be **Anyone**.
-4. In Apps Script → **Executions**, check whether `doPost` ran when you submitted a tip.
-5. Submit again on the live site — if the webhook is wrong you’ll now see an error instead of a fake success.
+4. In Vercel, `GOOGLE_SHEET_ID` must be the real id  
+   `1Aw_I7okts_kHt_KLqjp-fKzdlVVpU0mZIwXXu-3sJgY` — **not** the text `GOOGLE_SHEET_ID`.
+5. In Apps Script → **Executions**, check whether `doPost` ran when you submitted a tip.
+6. Submit again on the live site — if the webhook is wrong you’ll see an error instead of a fake success.
 
 ## Local testing
 

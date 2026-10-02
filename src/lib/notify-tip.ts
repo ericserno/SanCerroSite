@@ -2,9 +2,18 @@ import type { Tip } from "@/lib/tips";
 import { tipCategories } from "@/lib/tips";
 
 /** San Cerro tips spreadsheet */
-export const TIPS_SHEET_ID =
-  process.env.GOOGLE_SHEET_ID ||
-  "1Aw_I7okts_kHt_KLqjp-fKzdlVVpU0mZIwXXu-3sJgY";
+const DEFAULT_TIPS_SHEET_ID = "1Aw_I7okts_kHt_KLqjp-fKzdlVVpU0mZIwXXu-3sJgY";
+
+function resolveSheetId() {
+  const fromEnv = process.env.GOOGLE_SHEET_ID?.trim();
+  // Guard against placeholder env values like "GOOGLE_SHEET_ID"
+  if (fromEnv && /^[a-zA-Z0-9-_]{20,}$/.test(fromEnv) && fromEnv !== "GOOGLE_SHEET_ID") {
+    return fromEnv;
+  }
+  return DEFAULT_TIPS_SHEET_ID;
+}
+
+export const TIPS_SHEET_ID = resolveSheetId();
 
 function categoryLabel(value: Tip["category"]) {
   return tipCategories.find((c) => c.value === value)?.label ?? value;
