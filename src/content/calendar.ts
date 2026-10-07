@@ -157,19 +157,6 @@ export const calendarEvents: CalendarEvent[] = [
     ics: true,
   },
   {
-    id: "lake-murray-july4-2026",
-    title: "Lake Murray Music Fest & Fireworks",
-    summary:
-      "Traditional July 4th gathering for San Carlos / Del Cerro / Navajo. 2025 was canceled over permits and funding; 2026 also stayed dark after organizing challenges. Listed so neighbors remember to volunteer and donate if a return is attempted.",
-    where: "Lake Murray Community Park",
-    start: "2026-07-04T17:00:00",
-    end: "2026-07-04T22:00:00",
-    href: "/blog/lake-murray-fireworks-future",
-    status: "needs-support",
-    category: "holiday",
-    ics: false,
-  },
-  {
     id: "navajo-planners-2026-10",
     title: "Navajo Community Planners meeting",
     summary:

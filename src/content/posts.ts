@@ -139,22 +139,6 @@ export const posts: Post[] = [
     ],
   },
   {
-    slug: "lake-murray-fireworks-future",
-    title: "Lake Murray July 4th: cancelations and the path back",
-    date: "2025-07-03",
-    category: "events",
-    categoryLabel: "Events",
-    excerpt:
-      "The beloved lakeside show stayed dark in 2025. Neighbors are still the only path to a return.",
-    image: "/images/bridges.jpg",
-    body: [
-      "The Lake Murray Fireworks and Music Festival — long a July 4th anchor for San Carlos, Del Cerro, and the wider Navajo community — was canceled in 2025 after permit costs spiked and fireworks restrictions tightened.",
-      "Organizers described a volunteer-run nonprofit stretched thin: higher city fees, retiring long-time board members, and pressure to shift toward a drone show that would cost even more.",
-      "Turkey Trot fundraisers in past years helped keep Eagles n’ Freedom / Lake Murray fireworks afloat. If you want lights back over the water, the practical moves are the same as always: donate, volunteer for the board, and watch for updates from Lake Murray Fireworks and Events.",
-      "Until then, Lake Murray Community Park remains a gathering spot for parade energy and neighbor hangouts — just without the night sky show.",
-    ],
-  },
-  {
     slug: "local-san-cerro-real-estate-agent",
     title: "Local San Cerro Real Estate Agent — Paula Serno",
     date: "2025-11-19",

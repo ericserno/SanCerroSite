@@ -47,7 +47,7 @@ export default function HomePage() {
           </p>
           <div className="cta-row">
             <Link href="/events" className="button button-primary">
-              See events
+              See Calendar
             </Link>
             <Link href="/directory" className="button button-ghost">
               Local directory
