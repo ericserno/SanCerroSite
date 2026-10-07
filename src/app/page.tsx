@@ -71,7 +71,7 @@ export default function HomePage() {
           <div className="section-head reveal">
             <h2>What neighbors are talking about</h2>
             <p>
-              Nearby Oktoberfests and a new pizza stop on the boulevard.
+              Turkey Trot 2026, Navajo planners, Oktoberfests, and boulevard pizza.
             </p>
           </div>
           <div className="featured-grid">

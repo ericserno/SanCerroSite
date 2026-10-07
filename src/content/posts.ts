@@ -72,6 +72,56 @@ export const categoryMeta: Record<
 
 export const posts: Post[] = [
   {
+    slug: "san-cerro-turkey-trot-2026",
+    title: "San Cerro Turkey Trot 2026",
+    date: "2026-11-26",
+    category: "events",
+    categoryLabel: "Events",
+    excerpt:
+      "Thanksgiving morning 5K — run, walk, bike, or scoot. Arrive by 8:00; race at 8:30. Bring a canned good for the Food Bank.",
+    image: "/images/turkey-trot-2025.png",
+    featured: true,
+    featuredOrder: 1,
+    body: [
+      "Join us Thanksgiving morning for the San Cerro Turkey Trot 2026 — a neighborhood 5K you can run, walk, bike, or scoot.",
+      "The course starts and ends at the corner of Wandermere Drive and Belle Glade Avenue. Arrive by 8:00; the race begins at 8:30.",
+      "Prizes go to the fastest man, woman, stroller, girl (under 12), boy (under 12), and best dressed.",
+      "Bring canned goods to donate — human or pet food. The food drive benefits the San Diego Food Bank via Pershing Middle School.",
+    ],
+  },
+  {
+    slug: "navajo-community-planners-meeting",
+    title: "Navajo Community Planners meeting",
+    date: "2026-10-19",
+    category: "community",
+    categoryLabel: "Community",
+    excerpt:
+      "Land-use advisory meeting for Del Cerro, San Carlos, Allied Gardens, and Grantville — next session Oct 19.",
+    image: "/images/navajo-planners-meeting.jpg",
+    featured: true,
+    featuredOrder: 2,
+    body: [
+      "The Navajo Community Planners Group advises the City of San Diego on land-use items for Del Cerro, San Carlos, Allied Gardens, and Grantville.",
+      "The next meeting is Monday, October 19, 2026, from 6–8pm. Confirm the agenda and room on the city’s Navajo community planning page before you go.",
+      "Later fall sessions are listed on the San Cerro calendar for November 16 and December 21. Details: https://www.sandiego.gov/planning/community/profiles/navajo",
+    ],
+  },
+  {
+    slug: "bulls-only-rodeo-2026",
+    title: "Oct 9 Bulls Only Rodeo",
+    date: "2026-10-09",
+    category: "events",
+    categoryLabel: "Events",
+    excerpt:
+      "Bull riding, Jr. Bull Riding, and Mutton Bustin’ at Lakeside Rodeo Arena — Oct 9–10, shows at 7:30pm.",
+    image: "/images/bulls-only-rodeo-2026.jpg",
+    body: [
+      "Bulls Only Rodeo returns to the Lakeside Rodeo Arena on Friday, October 9 and Saturday, October 10, 2026. Shows start at 7:30pm; gates open at 5:30pm.",
+      "Expect IPRA-sanctioned bull riding plus Jr. Bull Riding and Mutton Bustin’. The event is produced with the Lakeside Optimist Club to support local youth programs.",
+      "Tickets are sold at Boot Barn (El Cajon and Kearny Mesa) and the Lakeside Rodeo Arena box office (12584 Mapleview St). More at https://bullsonlyrodeo.com/",
+    ],
+  },
+  {
     slug: "el-cajon-oktoberfest-2026",
     title: "El Cajon Oktoberfest returns for two weekends",
     date: "2026-09-25",
@@ -80,8 +130,6 @@ export const posts: Post[] = [
     excerpt:
       "German food, bier, music, and Kid Zone fun at 1017 S. Mollison — Sept 25–27 and Oct 2–4.",
     image: "/images/el-cajon-oktoberfest.jpg",
-    featured: true,
-    featuredOrder: 1,
     body: [
       "Oktoberfest in El Cajon, hosted by the German American Societies of San Diego, runs two weekends in 2026: September 25–27 and October 2–4 at 1017 S. Mollison Ave.",
       "Expect bratwurst, ox-on-the-spit, pretzels, German bier, folk dancing, contests, shopping booths, and a Kid Zone. Typical hours are Fridays 4–10pm, Saturdays 12–10pm, and Sundays 12–9pm. Adult admission is usually $15 Fridays/Saturdays and $5 Sundays; under 21 and active military are free.",
@@ -97,8 +145,6 @@ export const posts: Post[] = [
     excerpt:
       "Free all-ages fest on La Mesa Blvd — Oct 2–4, with biergarten entry and VIP packages at the door.",
     image: "/images/la-mesa-oktoberfest.jpg",
-    featured: true,
-    featuredOrder: 2,
     body: [
       "La Mesa Oktoberfest brings Bavarian festivities to La Mesa Blvd for its 53rd anniversary weekend: Friday, Oct 2 (4–10pm), Saturday, Oct 3 (10am–10pm), and Sunday, Oct 4 (12–8pm).",
       "The street festival is free and all ages. Biergarten entry is about $8 at the door (under 21 free), with Hofbräuhaus VIP packages available. Think German bier, food, games, dancing, dachshund races, and kids’ activities.",
