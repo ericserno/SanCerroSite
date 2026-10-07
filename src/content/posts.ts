@@ -184,44 +184,6 @@ export const posts: Post[] = [
     ],
   },
   {
-    slug: "2022-san-cerro-turkey-trot",
-    title: "2022 San Cerro Turkey Trot",
-    date: "2022-11-19",
-    category: "events",
-    categoryLabel: "Events",
-    excerpt: "Community Thanksgiving morning — prizes, swag, and fireworks fundraising.",
-    image: "/images/turkey-trot-2022.jpg",
-    body: [
-      "Join your community on Thanksgiving morning.",
-      "Prizes for winners, opportunities to donate to Lake Murray Fireworks, and swag at redbubble.com/shop/ap/130770526.",
-    ],
-  },
-  {
-    slug: "turkey-trot-for-eagles-n-freedom",
-    title: "Turkey Trot for Eagles n’ Freedom",
-    date: "2021-11-08",
-    category: "events",
-    categoryLabel: "Events",
-    excerpt: "Thanksgiving morning race supporting Lake Murray fireworks.",
-    image: "/images/turkey-trot-eagles.jpg",
-    body: [
-      "There will be a Turkey Trot race on Thanksgiving morning to help fund the 4th of July fireworks at Lake Murray.",
-    ],
-  },
-  {
-    slug: "green-jog-a-thon-2021",
-    title: "Green Jog-A-Thon 2021",
-    date: "2021-11-08",
-    category: "school",
-    categoryLabel: "School",
-    excerpt: "Support Green Elementary — relationships, learning, and neighborhood kids.",
-    image: "/images/green-jogathon-2021.png",
-    body: [
-      "Green Elementary is where student learning thrives and children feel good about the place they call their school.",
-      "We believe that is because of the incredible students, the staff who know relationships matter, and the support of our families. No amount is too small — your ongoing backing is truly appreciated.",
-    ],
-  },
-  {
     slug: "amazon-smile-is-donating-5",
     title: "Amazon Smile is donating 5%",
     date: "2018-10-31",
@@ -258,18 +220,6 @@ export const posts: Post[] = [
     image: "/images/eureka-restaurant.jpg",
     body: [
       "If you haven’t already been there, a new restaurant opened recently south of the 8. It has an indoor/outdoor bar and a great patio. Happy hour runs from 3–6 and 9–close, every day.",
-    ],
-  },
-  {
-    slug: "green-jog-a-thon",
-    title: "Green Jog-a-Thon",
-    date: "2018-10-30",
-    category: "school",
-    categoryLabel: "School",
-    excerpt: "Annual Green Elementary Jog-a-Thon — learn more or donate.",
-    image: "/images/green-gecko.png",
-    body: [
-      "Green Elementary will be hosting its annual Jog-a-Thon soon. Learn more or donate through the school’s PTA channels.",
     ],
   },
 ];
