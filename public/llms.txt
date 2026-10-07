@@ -17,7 +17,8 @@ San Cerro covers hillside neighborhoods east of Mission Trails / Lake Murray: Sa
 
 - Area: San Carlos and Del Cerro, San Diego, CA (often called San Cerro)
 - Nearby landmarks: Lake Murray, Mission Trails Regional Park, Del Cerro Boulevard / Windmill Farms plaza
-- Recurring: San Cerro Turkey Trot (Thanksgiving morning), Green Elementary Jog-a-Thon, Navajo Community Planners meetings
+- Recurring: San Cerro Turkey Trot (Thanksgiving morning), Green Elementary Jog-a-Thon, Navajo Community Planning Group (second Thursday, 6:30pm, Flood Church, 4772 Alvarado Canyon Rd; no December 2026 meeting unless a special session is called)
+- Fall 2026 nearby: Allied Gardens Halloween Carnival (Oct 16), San Carlos Halloween Carnival (Oct 23), Mission Trails campfire, concert, family walks, and habitat crew
 - Tips: Reviewed before publishing; production tips go to a Google Sheet via webhook
 
 ## Optional
