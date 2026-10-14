@@ -91,19 +91,19 @@ export const posts: Post[] = [
   },
   {
     slug: "navajo-community-planners-meeting",
-    title: "Navajo Community Planners meeting",
-    date: "2026-10-19",
+    title: "Navajo Community Planning Group meets Nov 12",
+    date: "2026-11-12",
     category: "community",
     categoryLabel: "Community",
     excerpt:
-      "Land-use advisory meeting for Del Cerro, San Carlos, Allied Gardens, and Grantville — next session Oct 19.",
+      "Public land-use meeting for Allied Gardens, Del Cerro, Grantville, and San Carlos — Thursday, Nov 12, 6:30pm at Flood Church.",
     image: "/images/navajo-planners-meeting.jpg",
     featured: true,
     featuredOrder: 2,
     body: [
-      "The Navajo Community Planners Group advises the City of San Diego on land-use items for Del Cerro, San Carlos, Allied Gardens, and Grantville.",
-      "The next meeting is Monday, October 19, 2026, from 6–8pm. Confirm the agenda and room on the city’s Navajo community planning page before you go.",
-      "Later fall sessions are listed on the San Cerro calendar for November 16 and December 21. Details: https://www.sandiego.gov/planning/community/profiles/navajo",
+      "The Navajo Community Planning Group advises the City of San Diego on land-use items for Allied Gardens, Del Cerro, Grantville, and San Carlos.",
+      "The next meeting is Thursday, November 12, 2026, from 6:30–8:30pm in the Flood Church Community Room, 4772 Alvarado Canyon Rd, San Diego 92120. The public is welcome. No RSVP is required. The agenda is posted at https://navajoplanners.wordpress.com/.",
+      "The 2026 board calendar (adopted in the May 14 minutes) meets on the second Thursday: the October 8 meeting has already been held, November 12 is next, and December is dark unless a special meeting is called.",
     ],
   },
   {
