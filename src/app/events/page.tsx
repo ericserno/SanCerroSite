@@ -10,7 +10,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { eventListJsonLd, webPageJsonLd } from "@/lib/structured-data";
 
 const eventsDescription =
-  "Living San Cerro community calendar for San Carlos and Del Cerro — Halloween carnivals, Mission Trails programs, Turkey Trot, civic meetings, and ICS subscribe.";
+  "Living San Cerro community calendar for San Carlos and Del Cerro — Mission Trails walks and crews, library events, civic meetings, Turkey Trot, and ICS subscribe.";
 
 export const metadata: Metadata = {
   title: "Events",
