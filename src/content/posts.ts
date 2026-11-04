@@ -72,6 +72,37 @@ export const categoryMeta: Record<
 
 export const posts: Post[] = [
   {
+    slug: "salsa-night-mission-trails-2026",
+    title: "Salsa Night at Mission Trails",
+    date: "2026-11-07",
+    category: "events",
+    categoryLabel: "Events",
+    excerpt:
+      "Free Saturday evening at the Visitor Center — Westwind Brass, Latin percussion, and salsa lessons.",
+    image: "/images/cowles-mountain.jpg",
+    body: [
+      "Mission Trails is hosting a free Salsa Night on Saturday, November 7, 2026, from 5:00 to 6:30pm at the Visitor Center, 1 Father Junipero Serra Trail.",
+      "Westwind Brass plays with Latin percussionist Manny Cepeda, and salsa dance lessons are included. Bring dancing shoes.",
+      "The same Saturday the Visitor Center lobby has a mountain-lion discovery table from 10:00am to 1:00pm, and an iNaturalist walk leaves the Kumeyaay Lake shade structure at 2:30pm. The park calendar is at https://mtrp.org/events/.",
+    ],
+  },
+  {
+    slug: "mission-trails-holiday-marketplace-2026",
+    title: "Mission Trails Holiday Marketplace",
+    date: "2026-11-14",
+    category: "events",
+    categoryLabel: "Events",
+    excerpt:
+      "Handmade gifts at the Visitor Center, November 14–15, 9am–3pm. A share of each sale supports the park.",
+    image: "/images/hills.jpg",
+    body: [
+      "The Mission Trails Holiday Marketplace returns Saturday and Sunday, November 14 and 15, 2026, from 9:00am to 3:00pm at the Visitor Center, 1 Father Junipero Serra Trail.",
+      "Local makers sell ceramics, jewelry, art, baked goods, and other handmade gifts. Thirty percent of each vendor’s sales goes to the Mission Trails Regional Park Foundation. Admission is free; the park asks visitors to register ahead.",
+      "Visitor Center parking fills quickly. Use the free shuttle from the south end of the Keil’s shopping-center lot at Jackson Drive and Navajo Road, and park between Ace Hardware and Primos Mexican Food rather than in front of the stores.",
+      "Details and registration: https://mtrp.org/marketplace/.",
+    ],
+  },
+  {
     slug: "san-cerro-turkey-trot-2026",
     title: "San Cerro Turkey Trot 2026",
     date: "2026-11-26",
@@ -286,6 +317,17 @@ export function getFeaturedPosts() {
     .sort((a, b) => (a.featuredOrder ?? 99) - (b.featuredOrder ?? 99));
 }
 
-export function getRecentPosts(limit = 9) {
-  return [...posts].sort((a, b) => b.date.localeCompare(a.date)).slice(0, limit);
+export function getRecentPosts(limit = 9, now = new Date()) {
+  const today = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "America/Los_Angeles",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(now);
+
+  return [...posts]
+    .filter((post) => !post.archived)
+    .filter((post) => post.category !== "events" || post.date >= today)
+    .sort((a, b) => b.date.localeCompare(a.date))
+    .slice(0, limit);
 }
