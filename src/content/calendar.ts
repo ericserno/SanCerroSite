@@ -24,151 +24,9 @@ export type CalendarEvent = {
 /**
  * Living neighborhood calendar for San Cerro (San Carlos + Del Cerro).
  * Keep dates concrete so ICS subscribe stays useful.
+ * Drop an event once its end time has passed instead of leaving it on the list.
  */
 export const calendarEvents: CalendarEvent[] = [
-  {
-    id: "allied-gardens-halloween-2026",
-    title: "Allied Gardens Halloween Carnival",
-    summary:
-      "Free carnival with a live DJ, prizes, and a costume contest at the recreation center. Contest times: ages 0–2 at 5:20pm, 3–5 at 5:40pm, 6–9 at 6:00pm, and 10+ at 6:20pm.",
-    where: "Allied Gardens Recreation Center, 5155 Greenbrier Ave, San Diego 92120",
-    start: "2026-10-16T17:00:00",
-    end: "2026-10-16T19:00:00",
-    href: "https://www.sandiego.gov/sites/default/files/alliedgardens.pdf",
-    status: "upcoming",
-    category: "holiday",
-    ics: true,
-  },
-  {
-    id: "kumeyaay-campground-crew-2026-10",
-    title: "Kumeyaay Lake Campground Crew",
-    summary:
-      "Third-Saturday volunteer morning with Ranger Brandon. Meet in the day-use lot. Wear long pants, closed-toe shoes, and sun protection; bring gloves and water if you have them. Rain cancels. Ages 8+; under 14 with an adult.",
-    where: "Kumeyaay Lake Campground day-use lot, 2 Father Junipero Serra Trail, San Diego 92119",
-    start: "2026-10-17T08:00:00",
-    end: "2026-10-17T12:00:00",
-    href: "https://www.sandiego.gov/event/kumeyaay-lake-campground-crew",
-    status: "upcoming",
-    category: "community",
-    ics: true,
-  },
-  {
-    id: "paws-and-tales-2026-10",
-    title: "Paws and Tales at Benjamin Library",
-    summary:
-      "Kids of all ages can read aloud to San Diego Humane Society canine ambassadors. No registration. The library hosts this on the third Saturday of the month.",
-    where: "Allied Gardens/Benjamin Library, 5188 Zion Ave, San Diego 92120",
-    start: "2026-10-17T11:00:00",
-    end: "2026-10-17T12:00:00",
-    href: "https://sdhumane.org/event/paws-and-tales-at-allied-gardens-benjamin-branch-library/2026-10-17/",
-    status: "upcoming",
-    category: "community",
-    ics: true,
-  },
-  {
-    id: "family-discovery-walk-2026-10",
-    title: "Family Discovery Walk",
-    summary:
-      "Free Mission Trails walk for families, aimed at ages 5–12 and open to everyone. Meet at the Kumeyaay Lake shade structure. Kids get a nature journal and sticker. This month’s theme is not posted yet. Closed-toe shoes, water, hat, and sunscreen. Rain cancels.",
-    where: "Kumeyaay Lake Campground shade structure, 2 Father Junipero Serra Trail, San Diego 92119",
-    start: "2026-10-17T13:00:00",
-    end: "2026-10-17T14:30:00",
-    href: "https://mtrp.org/nature-study/",
-    status: "upcoming",
-    category: "community",
-    ics: true,
-  },
-  {
-    id: "mtrp-concert-left-coast-2026",
-    title: "Concerts in the Park: Left Coast Woodwind Quintet",
-    summary:
-      "Free outdoor concert of autumnal and contemporary woodwind music at the Visitor Center amphitheater.",
-    where: "Mission Trails Visitor Center, 1 Father Junipero Serra Trail, San Diego 92119",
-    start: "2026-10-17T14:00:00",
-    end: "2026-10-17T15:30:00",
-    href: "https://www.sandiego.gov/event/concerts-park-mission-trails-regional-park-0",
-    status: "upcoming",
-    category: "community",
-    ics: true,
-  },
-  {
-    id: "san-carlos-halloween-2026",
-    title: "San Carlos Halloween Carnival",
-    summary:
-      "Free carnival with games, prizes, jumpers, music, trunk-or-treating, and a costume contest. Contest starts at 5:30pm: ages 0–3, then 4–6, 7–9, and 10–12.",
-    where: "San Carlos Community Park, 6445 Lake Badin Ave, San Diego 92119",
-    start: "2026-10-23T17:00:00",
-    end: "2026-10-23T19:00:00",
-    href: "https://www.sandiego.gov/event/halloween-carnival-costume-contest-san-carlos-community-park",
-    status: "upcoming",
-    category: "holiday",
-    ics: true,
-  },
-  {
-    id: "santee-spooktacular-2026",
-    title: "Santee Lakes Spooktacular",
-    summary:
-      "Free family Halloween day with trunk-or-treat, games, inflatables, face painting, and food trucks at Lakes 1 & 2. Parking ~$10.",
-    where: "Santee Lakes, 9310 Fanita Pkwy, Santee",
-    start: "2026-10-24T10:00:00",
-    end: "2026-10-24T14:00:00",
-    href: "https://www.santeelakes.com/event/spooktacular-3/",
-    status: "upcoming",
-    category: "community",
-    ics: true,
-  },
-  {
-    id: "allied-gardens-yoga-2026-10",
-    title: "Free yoga at Allied Gardens",
-    summary:
-      "Free drop-in yoga for ages 18+ in the recreation center. Register on SDRecConnect with code 136375.",
-    where: "Allied Gardens Recreation Center, 5155 Greenbrier Ave, San Diego 92120",
-    start: "2026-10-30T10:30:00",
-    end: "2026-10-30T11:30:00",
-    href: "https://www.sandiego.gov/park-and-recreation/centers/recctr/allied",
-    status: "upcoming",
-    category: "community",
-    ics: true,
-  },
-  {
-    id: "la-mesa-halloween-2026",
-    title: "Halloween in La Mesa Village",
-    summary:
-      "Free trick-or-treating at participating Village businesses along La Mesa Blvd between Grant and Acacia (and Spring St). Bring your own bag and costume. Pet costume contest check-in starts at 3:30pm at the Fountain Courtyard by the trolley station.",
-    where: "La Mesa Blvd, La Mesa Village",
-    start: "2026-10-31T16:00:00",
-    end: "2026-10-31T18:00:00",
-    href: "https://www.lamesavillageassociation.org/trick-or-treating-in-la-mesa-village",
-    status: "upcoming",
-    category: "holiday",
-    ics: true,
-  },
-  {
-    id: "mtrp-invasive-species-2026-11",
-    title: "Mission Trails Invasive Species Crew",
-    summary:
-      "First-Saturday volunteer crew with Ranger Dustin, pulling mustards, thistles, and other invasive plants. Gloves, water, and snacks are provided. Wear long pants, closed-toe shoes, and sun protection, and RSVP for the meeting spot. Ages 8+; under 13 with an adult.",
-    where: "Mission Trails Regional Park (meeting spot by RSVP), San Diego 92119",
-    start: "2026-11-07T08:00:00",
-    end: "2026-11-07T12:00:00",
-    href: "https://www.sandiego.gov/event/invasive-species-crew",
-    status: "upcoming",
-    category: "community",
-    ics: true,
-  },
-  {
-    id: "la-mesa-home-tour-2026",
-    title: "La Mesa Historic Home Tour",
-    summary:
-      "20th annual tour, “Artists & Officers,” through historic homes in Grossmont Colony and Mt. Helix. Tickets are sold online. Shuttles leave from the Grossmont High School parking lot. Plan on about three hours; the History Center suggests starting by noon.",
-    where: "Grossmont Colony & Mt. Helix; shuttle from 1100 Murray Dr, El Cajon",
-    start: "2026-11-07T09:00:00",
-    end: "2026-11-07T15:00:00",
-    href: "https://www.lamesahistory.com/annual-historic-home-tour-in-la-mesa/",
-    status: "upcoming",
-    category: "community",
-    ics: true,
-  },
   {
     id: "navajo-cpg-2026-11",
     title: "Navajo Community Planning Group",
@@ -180,6 +38,19 @@ export const calendarEvents: CalendarEvent[] = [
     href: "/blog/navajo-community-planners-meeting",
     status: "upcoming",
     category: "civic",
+    ics: true,
+  },
+  {
+    id: "allied-gardens-food-drive-2026-11",
+    title: "Canned food drive at Allied Gardens Pool",
+    summary:
+      "Special recreational and lap-swim hours. Bring unexpired canned food for Feeding San Diego.",
+    where: "Allied Gardens Swimming Pool, 6707 Glenroy St, San Diego 92120",
+    start: "2026-11-14T11:00:00",
+    end: "2026-11-14T13:00:00",
+    href: "https://www.sandiego.gov/event/canned-food-drive-allied-gardens-swimming-pool",
+    status: "upcoming",
+    category: "community",
     ics: true,
   },
   {
@@ -212,11 +83,24 @@ export const calendarEvents: CalendarEvent[] = [
     id: "mtrp-holiday-marketplace-2026",
     title: "Mission Trails Holiday Marketplace",
     summary:
-      "Handmade goods from local artisans at the Mission Trails Visitor Center, 9am–3pm both days. 30% of each vendor’s sales supports the MTRP Foundation.",
-    where: "Mission Trails Regional Park Visitor Center, One Father Junipero Serra Trail",
+      "Handmade goods from local artisans, 9am–3pm both days. Admission is free; register ahead on the park site. A portion of vendor sales supports the MTRP Foundation. The city listing says the sale is cashless (cards and Apple Pay). Visitor Center parking fills quickly — a free shuttle runs from the south end of the Keil's lot in San Carlos, between Ace Hardware and Primos, near Jackson Drive and Navajo Road.",
+    where: "Mission Trails Regional Park Visitor Center, One Father Junipero Serra Trail, San Diego 92119",
     start: "2026-11-14T09:00:00",
     end: "2026-11-15T15:00:00",
     href: "https://mtrp.org/marketplace/",
+    status: "upcoming",
+    category: "community",
+    ics: true,
+  },
+  {
+    id: "benjamin-book-club-2026-11",
+    title: "Benjamin Library book club",
+    summary:
+      "Monthly book club in the community room, third Tuesday. Copies of the book are at the front desk. No registration.",
+    where: "Allied Gardens/Benjamin Library, 5188 Zion Ave, San Diego 92120",
+    start: "2026-11-17T13:00:00",
+    end: "2026-11-17T14:00:00",
+    href: "https://sandiego.events.mylibrary.digital/event?id=320155",
     status: "upcoming",
     category: "community",
     ics: true,
@@ -235,10 +119,23 @@ export const calendarEvents: CalendarEvent[] = [
     ics: true,
   },
   {
+    id: "san-carlos-oasis-2026-11",
+    title: "San Diego Oasis: singer-songwriter hits",
+    summary:
+      "Doug Beaupré plays well-known songs by James Taylor, John Denver, Billy Joel, Elton John, and others. Walk-ins welcome. The library's Oasis series continues December 18 with Legends and Lore of Chocolate.",
+    where: "San Carlos Library, 7265 Jackson Dr, San Diego 92119",
+    start: "2026-11-20T14:00:00",
+    end: "2026-11-20T15:30:00",
+    href: "https://sandiego.events.mylibrary.digital/event?id=326739",
+    status: "upcoming",
+    category: "community",
+    ics: true,
+  },
+  {
     id: "kumeyaay-campground-crew-2026-11",
     title: "Kumeyaay Lake Campground Crew",
     summary:
-      "Third-Saturday volunteer morning with Ranger Brandon. Meet in the day-use lot. The city listing stops at November; a December date is not posted. Rain cancels. Ages 8+; under 14 with an adult.",
+      "Third-Saturday volunteer morning with Ranger Brandon. Meet in the day-use lot. Wear long pants, closed-toe shoes, and sun protection; gloves and water if you have them. Rain cancels. Ages 8+; under 14 with an adult. The volunteer schedule also lists December 19.",
     where: "Kumeyaay Lake Campground day-use lot, 2 Father Junipero Serra Trail, San Diego 92119",
     start: "2026-11-21T08:00:00",
     end: "2026-11-21T12:00:00",
@@ -262,13 +159,52 @@ export const calendarEvents: CalendarEvent[] = [
   },
   {
     id: "family-discovery-walk-2026-11",
-    title: "Family Discovery Walk",
+    title: "Family Discovery Walk: Trees & Shrubs",
     summary:
-      "Free third-Saturday Mission Trails walk, October through June, for families with kids about 5–12. Meet at the Kumeyaay Lake shade structure. This month’s theme is not posted yet. Rain cancels.",
+      "Free third-Saturday Mission Trails walk for families with kids about 5–12, and open to everyone. This month is trees and shrubs, including how to identify some trees by their leaves. Meet at the Kumeyaay Lake shade structure near the east restrooms. Kids get a nature journal and sticker. Closed-toe shoes and water. Rain or an extreme-heat warning cancels.",
     where: "Kumeyaay Lake Campground shade structure, 2 Father Junipero Serra Trail, San Diego 92119",
     start: "2026-11-21T13:00:00",
     end: "2026-11-21T14:30:00",
     href: "https://mtrp.org/nature-study/",
+    status: "upcoming",
+    category: "community",
+    ics: true,
+  },
+  {
+    id: "benjamin-chess-2026-11",
+    title: "Chess club at Benjamin Library",
+    summary:
+      "Patrick Henry High School chess players lead a short lesson, then matches, for beginners and returning players. Third Saturday, 2:00–4:00pm. No registration.",
+    where: "Allied Gardens/Benjamin Library, 5188 Zion Ave, San Diego 92120",
+    start: "2026-11-21T14:00:00",
+    end: "2026-11-21T16:00:00",
+    href: "https://sandiego.events.mylibrary.digital/event?id=366164",
+    status: "upcoming",
+    category: "community",
+    ics: true,
+  },
+  {
+    id: "benjamin-short-classic-2026-11",
+    title: "Benjamin Library short-classic book club",
+    summary:
+      "Discussion of a short classic, fourth Tuesday at 6:30pm. Copies are at the desk. No registration.",
+    where: "Allied Gardens/Benjamin Library, 5188 Zion Ave, San Diego 92120",
+    start: "2026-11-24T18:30:00",
+    end: "2026-11-24T19:30:00",
+    href: "https://sandiego.events.mylibrary.digital/event?id=318137",
+    status: "upcoming",
+    category: "community",
+    ics: true,
+  },
+  {
+    id: "san-carlos-youth-chess-2026-11",
+    title: "San Carlos youth chess",
+    summary:
+      "Drop-in chess at the San Carlos branch, second and fourth Tuesdays. All levels, from first game to tournament dreams.",
+    where: "San Carlos Library, 7265 Jackson Dr, San Diego 92119",
+    start: "2026-11-24T17:00:00",
+    end: "2026-11-24T19:00:00",
+    href: "https://sandiego.librarymarket.com/event/san-carlos-youth-chess-474657",
     status: "upcoming",
     category: "community",
     ics: true,
@@ -287,14 +223,66 @@ export const calendarEvents: CalendarEvent[] = [
     ics: true,
   },
   {
+    id: "scfol-presale-2026-12",
+    title: "San Carlos Friends book-sale preview",
+    summary:
+      "Members-only preview of the monthly used-book sale. You can sign up for a Friends membership that afternoon and shop the preview. Hardbacks, paperbacks, kids' books, and books on CD. Proceeds buy books, programs, and equipment for the branch.",
+    where: "San Carlos Library, 7265 Jackson Dr, San Diego 92119",
+    start: "2026-12-04T13:00:00",
+    end: "2026-12-04T15:00:00",
+    href: "https://sandiego.events.mylibrary.digital/event?id=321087",
+    status: "upcoming",
+    category: "community",
+    ics: true,
+  },
+  {
+    id: "mtrp-invasive-species-2026-12",
+    title: "Mission Trails Invasive Species Crew",
+    summary:
+      "First-Saturday volunteer crew with Ranger Dustin, pulling mustards, thistles, and other invasive plants. Gloves, water, and snacks are provided. Wear long pants, closed-toe shoes, and sun protection, and RSVP for the meeting spot. Ages 8+; under 13 with an adult. Same morning as the wildlife tracking walk at East Fortuna.",
+    where: "Mission Trails Regional Park (meeting spot by RSVP), San Diego 92119",
+    start: "2026-12-05T08:00:00",
+    end: "2026-12-05T12:00:00",
+    href: "https://www.sandiego.gov/event/invasive-species-crew",
+    status: "upcoming",
+    category: "community",
+    ics: true,
+  },
+  {
+    id: "mtrp-tracking-walk-2026-12",
+    title: "Mission Trails wildlife tracking walk",
+    summary:
+      "Free family walk with the San Diego Tracking Team. Two hours of looking for tracks and other signs. Meet in front of the Ranger Field Station at the East Fortuna Staging Area. Long pants and trail shoes. Rain cancels.",
+    where: "East Fortuna Staging Area, Ranger Field Station, Mission Trails, San Diego 92119",
+    start: "2026-12-05T08:00:00",
+    end: "2026-12-05T10:00:00",
+    href: "https://www.sdtt.org/upcoming-events",
+    status: "upcoming",
+    category: "community",
+    ics: true,
+  },
+  {
+    id: "scfol-booksale-2026-12",
+    title: "San Carlos Friends book sale",
+    summary:
+      "Monthly used-book sale, first Saturday, 9:30am–3:00pm. Hardbacks, paperbacks, children's books, and books on CD. Funds help the San Carlos branch buy books, programs, and equipment. No registration.",
+    where: "San Carlos Library, 7265 Jackson Dr, San Diego 92119",
+    start: "2026-12-05T09:30:00",
+    end: "2026-12-05T15:00:00",
+    href: "https://sandiego.events.mylibrary.digital/event?id=321129",
+    status: "upcoming",
+    category: "community",
+    ics: true,
+  },
+  {
     id: "mtrp-concert-westwind-2026",
     title: "Concerts in the Park: Westwind Brass",
     summary:
-      "Free series finale with Westwind Brass and the Patrick Henry High School band. The organizer, KPBS, and Eventbrite place it at the Visitor Center.",
+      "Free series finale with Westwind Brass and musicians from Patrick Henry High School. The city, KPBS, and Eventbrite place it at the Visitor Center.",
     where: "Mission Trails Visitor Center, 1 Father Junipero Serra Trail, San Diego 92119",
     start: "2026-12-05T14:00:00",
     end: "2026-12-05T15:30:00",
-    href: "https://www.eventbrite.com/e/westwind-brass-series-finale-tickets-1990985759001",
+    href: "https://www.sandiego.gov/event/concerts-park-mission-trails-regional-park-1",
     status: "upcoming",
     category: "community",
     ics: true,
@@ -303,7 +291,7 @@ export const calendarEvents: CalendarEvent[] = [
     id: "christmas-on-mt-helix-2026",
     title: "Christmas on Mt. Helix",
     summary:
-      "Free holiday afternoon at Mt. Helix Park: Christmas market, food, hot chocolate, kids’ crafts, Santa photos, and caroling. General parking is at Grossmont High School’s lower lot, 1100 Murray Dr, with shuttles to the peak.",
+      "Free holiday afternoon at Mt. Helix Park: Christmas market, food, hot chocolate, kids' crafts, Santa photos, and caroling. General parking is at Grossmont High School's lower lot, 1100 Murray Dr, with shuttles to the peak.",
     where: "Mt. Helix Park, 4901 Mt. Helix Dr, La Mesa",
     start: "2026-12-05T15:00:00",
     end: "2026-12-05T20:00:00",
@@ -313,10 +301,36 @@ export const calendarEvents: CalendarEvent[] = [
     ics: true,
   },
   {
+    id: "san-carlos-youth-chess-2026-12",
+    title: "San Carlos youth chess",
+    summary:
+      "Drop-in chess at the San Carlos branch, second and fourth Tuesdays. All levels.",
+    where: "San Carlos Library, 7265 Jackson Dr, San Diego 92119",
+    start: "2026-12-08T17:00:00",
+    end: "2026-12-08T19:00:00",
+    href: "https://sandiego.librarymarket.com/event/san-carlos-youth-chess-474657",
+    status: "upcoming",
+    category: "community",
+    ics: true,
+  },
+  {
+    id: "mtrp-habitat-restoration-2026-12",
+    title: "Mission Trails Habitat Restoration Crew",
+    summary:
+      "Second-Saturday volunteer morning with Ranger Steven: pull invasive plants, water natives, and mulch. Bring gloves, sun protection, and a water bottle if you have them. Ice water and snacks are provided. Rain cancels. Ages 8+; under 13 with an adult. RSVP for the meeting spot. Same morning as the Discovery Table at the Visitor Center.",
+    where: "Mission Trails Regional Park (meeting spot by RSVP), San Diego 92119",
+    start: "2026-12-12T08:00:00",
+    end: "2026-12-12T12:00:00",
+    href: "https://www.sandiego.gov/event/habitat-restoration-crew",
+    status: "upcoming",
+    category: "community",
+    ics: true,
+  },
+  {
     id: "mtrp-discovery-tables-2026-12",
     title: "Mission Trails Discovery Table",
     summary:
-      "Hands-on nature table in the Visitor Center lobby, 10:00am–12:30pm on the city’s event listing. Second Saturday of the month.",
+      "Hands-on nature table in the Visitor Center lobby, 10:00am–12:30pm on the city's event listing. The next listed date after this one is March 13, 2027.",
     where: "Mission Trails Visitor Center, 1 Father Junipero Serra Trail, San Diego 92119",
     start: "2026-12-12T10:00:00",
     end: "2026-12-12T12:30:00",
@@ -329,13 +343,52 @@ export const calendarEvents: CalendarEvent[] = [
     id: "la-mesa-holiday-village-2026",
     title: "Holiday in the Village",
     summary:
-      "La Mesa Village Association’s annual holiday tradition — shopping, dining, vendors, and elf hunt along La Mesa Blvd between Spring and 4th.",
+      "La Mesa Village Association's annual holiday tradition — shopping, dining, vendors, and elf hunt along La Mesa Blvd between Spring and 4th.",
     where: "La Mesa Blvd, La Mesa Village",
     start: "2026-12-12T12:00:00",
     end: "2026-12-12T21:00:00",
     href: "https://www.lamesavillageassociation.org/holiday-in-the-village-a-la-mesa-tradition",
     status: "upcoming",
     category: "holiday",
+    ics: true,
+  },
+  {
+    id: "benjamin-book-club-2026-12",
+    title: "Benjamin Library book club",
+    summary:
+      "Monthly book club in the community room, third Tuesday. Copies of the book are at the front desk. No registration.",
+    where: "Allied Gardens/Benjamin Library, 5188 Zion Ave, San Diego 92120",
+    start: "2026-12-15T13:00:00",
+    end: "2026-12-15T14:00:00",
+    href: "https://sandiego.events.mylibrary.digital/event?id=320156",
+    status: "upcoming",
+    category: "community",
+    ics: true,
+  },
+  {
+    id: "san-carlos-oasis-2026-12",
+    title: "San Diego Oasis: Legends and Lore of Chocolate",
+    summary:
+      "Friday Oasis program at the San Carlos branch. The library lists a 2:00pm start; this block uses the same 90 minutes as the November singer-songwriter session.",
+    where: "San Carlos Library, 7265 Jackson Dr, San Diego 92119",
+    start: "2026-12-18T14:00:00",
+    end: "2026-12-18T15:30:00",
+    href: "https://sandiego.events.mylibrary.digital/event?id=326739",
+    status: "upcoming",
+    category: "community",
+    ics: true,
+  },
+  {
+    id: "kumeyaay-campground-crew-2026-12",
+    title: "Kumeyaay Lake Campground Crew",
+    summary:
+      "Third-Saturday volunteer morning with Ranger Brandon. Meet in the day-use lot. Wear long pants, closed-toe shoes, and sun protection. Rain cancels. Ages 8+; under 14 with an adult. RSVP with Ranger Brandon.",
+    where: "Kumeyaay Lake Campground day-use lot, 2 Father Junipero Serra Trail, San Diego 92119",
+    start: "2026-12-19T08:00:00",
+    end: "2026-12-19T12:00:00",
+    href: "https://app.betterimpact.com/PublicOrganization/032e2c41-70cc-4ba9-bfc7-74e92ed28d5b/Activity/5fa1ec2a-fa74-42cf-b7cd-af3c9c72f1d4/1",
+    status: "upcoming",
+    category: "community",
     ics: true,
   },
   {
@@ -353,9 +406,9 @@ export const calendarEvents: CalendarEvent[] = [
   },
   {
     id: "family-discovery-walk-2026-12",
-    title: "Family Discovery Walk",
+    title: "Family Discovery Walk: Wildlife Habitats",
     summary:
-      "Free third-Saturday Mission Trails walk, October through June. Meet at the Kumeyaay Lake shade structure. This month’s theme is not posted yet. Rain cancels.",
+      "Free third-Saturday Mission Trails walk. This month is how the park's habitats, especially water, support wildlife. Meet at the Kumeyaay Lake shade structure near the east restrooms. Kids get a nature journal and sticker. Closed-toe shoes and water. Rain or an extreme-heat warning cancels.",
     where: "Kumeyaay Lake Campground shade structure, 2 Father Junipero Serra Trail, San Diego 92119",
     start: "2026-12-19T13:00:00",
     end: "2026-12-19T14:30:00",
@@ -365,10 +418,127 @@ export const calendarEvents: CalendarEvent[] = [
     ics: true,
   },
   {
+    id: "benjamin-chess-2026-12",
+    title: "Chess club at Benjamin Library",
+    summary:
+      "Patrick Henry High School chess players lead a short lesson, then matches. The library describes the club as the third Saturday of every month, 2:00–4:00pm. No registration.",
+    where: "Allied Gardens/Benjamin Library, 5188 Zion Ave, San Diego 92120",
+    start: "2026-12-19T14:00:00",
+    end: "2026-12-19T16:00:00",
+    href: "https://sandiego.events.mylibrary.digital/event?id=366164",
+    status: "upcoming",
+    category: "community",
+    ics: true,
+  },
+  {
+    id: "mtrp-invasive-species-2027-01",
+    title: "Mission Trails Invasive Species Crew",
+    summary:
+      "First-Saturday volunteer crew with Ranger Dustin, pulling mustards, thistles, and other invasive plants. Gloves, water, and snacks are provided. Wear long pants, closed-toe shoes, and sun protection, and RSVP for the meeting spot. Ages 8+; under 13 with an adult.",
+    where: "Mission Trails Regional Park (meeting spot by RSVP), San Diego 92119",
+    start: "2027-01-02T08:00:00",
+    end: "2027-01-02T12:00:00",
+    href: "https://app.betterimpact.com/PublicOrganization/032e2c41-70cc-4ba9-bfc7-74e92ed28d5b/Activity/a0519cbd-f29e-4204-9b08-3aadf058e5d6/1",
+    status: "upcoming",
+    category: "community",
+    ics: true,
+  },
+  {
+    id: "mtrp-tracking-walk-2027-01",
+    title: "Mission Trails wildlife tracking walk",
+    summary:
+      "Free family walk with the San Diego Tracking Team. Meet in front of the Ranger Field Station at the East Fortuna Staging Area. Long pants and trail shoes. Rain cancels.",
+    where: "East Fortuna Staging Area, Ranger Field Station, Mission Trails, San Diego 92119",
+    start: "2027-01-02T08:00:00",
+    end: "2027-01-02T10:00:00",
+    href: "https://www.sdtt.org/upcoming-events",
+    status: "upcoming",
+    category: "community",
+    ics: true,
+  },
+  {
+    id: "mtrp-habitat-restoration-2027-01",
+    title: "Mission Trails Habitat Restoration Crew",
+    summary:
+      "Second-Saturday volunteer morning with Ranger Steven: pull invasive plants, water natives, and mulch. Bring gloves, sun protection, and a water bottle if you have them. Rain cancels. Ages 8+; under 13 with an adult. RSVP for the meeting spot.",
+    where: "Mission Trails Regional Park (meeting spot by RSVP), San Diego 92119",
+    start: "2027-01-09T08:00:00",
+    end: "2027-01-09T12:00:00",
+    href: "https://app.betterimpact.com/PublicOrganization/032e2c41-70cc-4ba9-bfc7-74e92ed28d5b/Activity/7cef38a1-eb14-48bf-bd5b-c34053f0ff98/1",
+    status: "upcoming",
+    category: "community",
+    ics: true,
+  },
+  {
+    id: "navajo-cpg-2027-01",
+    title: "Navajo Community Planning Group",
+    summary:
+      "Regular second-Thursday land-use meeting for Allied Gardens, Del Cerro, Grantville, and San Carlos. December is dark, so this is the next session after November 12. The agenda is posted closer to the date.",
+    where: "Flood Church Community Room, 4772 Alvarado Canyon Rd, San Diego 92120",
+    start: "2027-01-14T18:30:00",
+    end: "2027-01-14T20:30:00",
+    href: "/blog/navajo-community-planners-meeting",
+    status: "upcoming",
+    category: "civic",
+    ics: true,
+  },
+  {
+    id: "kumeyaay-campground-crew-2027-01",
+    title: "Kumeyaay Lake Campground Crew",
+    summary:
+      "Third-Saturday volunteer morning with Ranger Brandon. Meet in the day-use lot. Rain cancels. Ages 8+; under 14 with an adult.",
+    where: "Kumeyaay Lake Campground day-use lot, 2 Father Junipero Serra Trail, San Diego 92119",
+    start: "2027-01-16T08:00:00",
+    end: "2027-01-16T12:00:00",
+    href: "https://app.betterimpact.com/PublicOrganization/032e2c41-70cc-4ba9-bfc7-74e92ed28d5b/Activity/5fa1ec2a-fa74-42cf-b7cd-af3c9c72f1d4/1",
+    status: "upcoming",
+    category: "community",
+    ics: true,
+  },
+  {
+    id: "paws-and-tales-2027-01",
+    title: "Paws and Tales at Benjamin Library",
+    summary:
+      "Kids of all ages can read aloud to San Diego Humane Society canine ambassadors. No registration. The library series lists this third-Saturday session at 11am.",
+    where: "Allied Gardens/Benjamin Library, 5188 Zion Ave, San Diego 92120",
+    start: "2027-01-16T11:00:00",
+    end: "2027-01-16T12:00:00",
+    href: "https://sandiego.events.mylibrary.digital/event?id=379872",
+    status: "upcoming",
+    category: "community",
+    ics: true,
+  },
+  {
+    id: "family-discovery-walk-2027-01",
+    title: "Family Discovery Walk: Sensing Nature",
+    summary:
+      "Free third-Saturday Mission Trails walk, back after the July–September break. January's posted theme is Sensing Nature. Meet at the Kumeyaay Lake shade structure. Kids get a nature journal and sticker. Rain or an extreme-heat warning cancels.",
+    where: "Kumeyaay Lake Campground shade structure, 2 Father Junipero Serra Trail, San Diego 92119",
+    start: "2027-01-16T13:00:00",
+    end: "2027-01-16T14:30:00",
+    href: "https://mtrp.org/nature-study/",
+    status: "upcoming",
+    category: "community",
+    ics: true,
+  },
+  {
+    id: "san-carlos-recreation-group-2027-01",
+    title: "San Carlos/Lake Murray Recreation Advisory Group",
+    summary:
+      "Neighbors advise Parks and Recreation on programs, events, and park improvements. Third Wednesday of odd-numbered months. The city lists a 6:30pm start and does not publish an end time; this block runs to 8:00pm.",
+    where: "San Carlos Recreation Center, 6445 Lake Badin Ave, San Diego 92119",
+    start: "2027-01-20T18:30:00",
+    end: "2027-01-20T20:00:00",
+    href: "https://www.sandiego.gov/park-and-recreation/centers/recctr/sancarlos",
+    status: "upcoming",
+    category: "civic",
+    ics: true,
+  },
+  {
     id: "lakeside-rodeo-2027",
     title: "Lakeside Rodeo",
     summary:
-      "PRCA-sanctioned four-day rodeo at the Lakeside Rodeo Arena — East County’s big spring family event. Exact 2027 dates are typically late April; confirm on lakesiderodeo.com when tickets open.",
+      "PRCA-sanctioned four-day rodeo at the Lakeside Rodeo Arena — East County's big spring family event. Exact 2027 dates are typically late April; confirm on lakesiderodeo.com when tickets open.",
     where: "Lakeside Rodeo Arena, 12584 Mapleview St, Lakeside",
     start: "2027-04-22T18:30:00",
     end: "2027-04-25T21:00:00",
@@ -376,83 +546,6 @@ export const calendarEvents: CalendarEvent[] = [
     status: "annual",
     category: "community",
     ics: true,
-  },
-  {
-    id: "el-cajon-oktoberfest-2026",
-    title: "El Cajon Oktoberfest",
-    summary:
-      "Two weekends of German food, bier, music, and Kid Zone fun hosted by the German American Societies of San Diego. Fri 4–10pm, Sat 12–10pm, Sun 12–9pm.",
-    where: "1017 S. Mollison Ave, El Cajon",
-    start: "2026-09-25T16:00:00",
-    end: "2026-10-04T21:00:00",
-    href: "https://www.falkorevents.com/eventcal/event/6829/details/",
-    status: "past",
-    category: "community",
-    ics: false,
-  },
-  {
-    id: "la-mesa-oktoberfest-2026",
-    title: "La Mesa Oktoberfest",
-    summary:
-      "Free all-ages festival on La Mesa Blvd. Biergarten entry ~$8 at the door; VIP packages available. Fri 4–10pm, Sat 10am–10pm, Sun 12–8pm.",
-    where: "La Mesa Blvd, La Mesa, CA 91942",
-    start: "2026-10-02T16:00:00",
-    end: "2026-10-04T20:00:00",
-    href: "https://www.lamesaoktoberfest.org/",
-    status: "past",
-    category: "community",
-    ics: false,
-  },
-  {
-    id: "bulls-only-rodeo-2026",
-    title: "Bulls Only Rodeo",
-    summary:
-      "Two nights of bull riding, Jr. Bull Riding, and Mutton Bustin’ at the Lakeside Rodeo Arena. Shows at 7:30pm; gates open 5:30pm. Tickets at Boot Barn and the arena box office.",
-    where: "Lakeside Rodeo Arena, 12584 Mapleview St, Lakeside",
-    start: "2026-10-09T17:30:00",
-    end: "2026-10-10T22:30:00",
-    href: "/blog/bulls-only-rodeo-2026",
-    status: "past",
-    category: "community",
-    ics: false,
-  },
-  {
-    id: "park-cleanup-fall-2026",
-    title: "Princess Del Cerro Park tidy-up",
-    summary:
-      "Neighbor-led litter pickup and playground wipe-down. Bring gloves; kids welcome with a parent.",
-    where: "Princess Del Cerro Park",
-    start: "2026-10-11T09:00:00",
-    end: "2026-10-11T11:00:00",
-    status: "past",
-    category: "community",
-    ics: false,
-  },
-  {
-    id: "pizza-opening",
-    title: "Del Cerro Pizza & Beer opened",
-    summary:
-      "NY-style pizzeria opened December 2, 2024 in the Windmill Farms plaza (former El Torry space).",
-    where: "6358 Del Cerro Blvd",
-    start: "2024-12-02T11:00:00",
-    end: "2024-12-02T20:00:00",
-    href: "/blog/del-cerro-pizza-and-beer-opens",
-    status: "past",
-    category: "opening",
-    ics: false,
-  },
-  {
-    id: "turkey-trot-2025",
-    title: "2025 San Cerro Turkey Trot",
-    summary:
-      "Thanksgiving morning 5K with food drive for the San Diego Food Bank via Pershing Middle School.",
-    where: "Wandermere Dr & Belle Glade Ave",
-    start: "2025-11-27T08:00:00",
-    end: "2025-11-27T10:30:00",
-    href: "/blog/2025-san-cerro-turkey-trot",
-    status: "past",
-    category: "race",
-    ics: false,
   },
 ];
 
@@ -476,13 +569,18 @@ export function getIcsEvents() {
 export function formatEventWhen(event: CalendarEvent) {
   const start = new Date(event.start);
   const end = new Date(event.end);
-  const date = start.toLocaleDateString("en-US", {
+  const dateOpts: Intl.DateTimeFormatOptions = {
     weekday: "short",
     month: "short",
     day: "numeric",
     year: "numeric",
-  });
-  if (event.allDay) return date;
+  };
+  const date = start.toLocaleDateString("en-US", dateOpts);
+  const sameDay = start.toDateString() === end.toDateString();
+  if (event.allDay) {
+    if (sameDay) return date;
+    return `${date} – ${end.toLocaleDateString("en-US", dateOpts)}`;
+  }
   const startTime = start.toLocaleTimeString("en-US", {
     hour: "numeric",
     minute: "2-digit",
@@ -491,5 +589,8 @@ export function formatEventWhen(event: CalendarEvent) {
     hour: "numeric",
     minute: "2-digit",
   });
+  if (!sameDay) {
+    return `${date} ${startTime} – ${end.toLocaleDateString("en-US", dateOpts)} ${endTime}`;
+  }
   return `${date} · ${startTime}–${endTime}`;
 }

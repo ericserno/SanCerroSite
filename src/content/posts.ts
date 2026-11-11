@@ -72,6 +72,38 @@ export const categoryMeta: Record<
 
 export const posts: Post[] = [
   {
+    slug: "allied-gardens-pool-food-drive-2026",
+    title: "Allied Gardens pool canned food drive",
+    date: "2026-11-14",
+    category: "community",
+    categoryLabel: "Community",
+    excerpt:
+      "Saturday, Nov. 14, 11am–1pm at Allied Gardens Swimming Pool. Special swim hours, and unexpired cans for Feeding San Diego.",
+    image: "/images/hills.jpg",
+    body: [
+      "Allied Gardens Swimming Pool is holding a canned-food drive on Saturday, November 14, 2026, from 11:00am to 1:00pm, with special recreational and lap-swim hours.",
+      "Bring unexpired canned food. Donations support Feeding San Diego.",
+      "The pool is at 6707 Glenroy Street, San Diego 92120. City listing: https://www.sandiego.gov/event/canned-food-drive-allied-gardens-swimming-pool",
+    ],
+  },
+  {
+    slug: "mission-trails-holiday-marketplace-2026",
+    title: "Mission Trails Holiday Marketplace",
+    date: "2026-11-14",
+    category: "events",
+    categoryLabel: "Events",
+    excerpt:
+      "Nov. 14–15, 9am–3pm at the Visitor Center. Free shuttle from the Keil's lot in San Carlos — Visitor Center parking fills up.",
+    image: "/images/cowles-mountain.jpg",
+    body: [
+      "The Mission Trails Holiday Marketplace is Saturday and Sunday, November 14–15, 2026, 9am–3pm at the Visitor Center, 1 Father Junipero Serra Trail, San Diego 92119.",
+      "Local makers sell ceramics, jewelry, art, baked goods, and other gifts. A portion of each vendor's sales supports the Mission Trails Regional Park Foundation. Admission is free, and the park asks visitors to register ahead. The city listing says the sale is cashless (cards and Apple Pay).",
+      "Visitor Center parking fills quickly. A free shuttle runs from the south end of the Keil's Food Store lot in San Carlos, near Jackson Drive and Navajo Road. Park between Ace Hardware and Primos Mexican Food, not in front of the storefronts.",
+      "The Visitor Center also hosts a Discovery Table on Saturday from 10:00am to 12:30pm, so the building will be busy that morning.",
+      "Registration and vendor list: https://mtrp.org/marketplace/",
+    ],
+  },
+  {
     slug: "san-cerro-turkey-trot-2026",
     title: "San Cerro Turkey Trot 2026",
     date: "2026-11-26",
@@ -103,52 +135,7 @@ export const posts: Post[] = [
     body: [
       "The Navajo Community Planning Group advises the City of San Diego on land-use items for Allied Gardens, Del Cerro, Grantville, and San Carlos.",
       "Meetings are the second Thursday of the month, 6:30–8:30pm, in the Flood Church Community Room at 4772 Alvarado Canyon Road, San Diego 92120. August and December are dark unless a special meeting is called.",
-      "The October 8, 2026 meeting has already been held. The next meeting is Thursday, November 12, 2026. Agendas and minutes: https://www.sandiego.gov/planning/community-plans/navajo/planning-group",
-    ],
-  },
-  {
-    slug: "bulls-only-rodeo-2026",
-    title: "Oct 9 Bulls Only Rodeo",
-    date: "2026-10-09",
-    category: "events",
-    categoryLabel: "Events",
-    excerpt:
-      "Bull riding, Jr. Bull Riding, and Mutton Bustin’ at Lakeside Rodeo Arena — Oct 9–10, shows at 7:30pm.",
-    image: "/images/bulls-only-rodeo-2026.jpg",
-    body: [
-      "Bulls Only Rodeo returns to the Lakeside Rodeo Arena on Friday, October 9 and Saturday, October 10, 2026. Shows start at 7:30pm; gates open at 5:30pm.",
-      "Expect IPRA-sanctioned bull riding plus Jr. Bull Riding and Mutton Bustin’. The event is produced with the Lakeside Optimist Club to support local youth programs.",
-      "Tickets are sold at Boot Barn (El Cajon and Kearny Mesa) and the Lakeside Rodeo Arena box office (12584 Mapleview St). More at https://bullsonlyrodeo.com/",
-    ],
-  },
-  {
-    slug: "el-cajon-oktoberfest-2026",
-    title: "El Cajon Oktoberfest returns for two weekends",
-    date: "2026-09-25",
-    category: "events",
-    categoryLabel: "Events",
-    excerpt:
-      "German food, bier, music, and Kid Zone fun at 1017 S. Mollison — Sept 25–27 and Oct 2–4.",
-    image: "/images/el-cajon-oktoberfest.jpg",
-    body: [
-      "Oktoberfest in El Cajon, hosted by the German American Societies of San Diego, runs two weekends in 2026: September 25–27 and October 2–4 at 1017 S. Mollison Ave.",
-      "Expect bratwurst, ox-on-the-spit, pretzels, German bier, folk dancing, contests, shopping booths, and a Kid Zone. Typical hours are Fridays 4–10pm, Saturdays 12–10pm, and Sundays 12–9pm. Adult admission is usually $15 Fridays/Saturdays and $5 Sundays; under 21 and active military are free.",
-      "Details and listings: https://www.falkorevents.com/eventcal/event/6829/details/ — also see germanclubsandiego.com for club updates.",
-    ],
-  },
-  {
-    slug: "la-mesa-oktoberfest-2026",
-    title: "La Mesa Oktoberfest hits the boulevard",
-    date: "2026-10-02",
-    category: "events",
-    categoryLabel: "Events",
-    excerpt:
-      "Free all-ages fest on La Mesa Blvd — Oct 2–4, with biergarten entry and VIP packages at the door.",
-    image: "/images/la-mesa-oktoberfest.jpg",
-    body: [
-      "La Mesa Oktoberfest brings Bavarian festivities to La Mesa Blvd for its 53rd anniversary weekend: Friday, Oct 2 (4–10pm), Saturday, Oct 3 (10am–10pm), and Sunday, Oct 4 (12–8pm).",
-      "The street festival is free and all ages. Biergarten entry is about $8 at the door (under 21 free), with Hofbräuhaus VIP packages available. Think German bier, food, games, dancing, dachshund races, and kids’ activities.",
-      "More info and VIP options: https://www.lamesaoktoberfest.org/",
+      "The October 8, 2026 meeting has already been held. The next meeting is Thursday, November 12, 2026. December is dark. The following regular meeting is Thursday, January 14, 2027. Agendas and minutes: https://www.sandiego.gov/planning/community-plans/navajo/planning-group",
     ],
   },
   {
@@ -166,22 +153,6 @@ export const posts: Post[] = [
       "Del Cerro Pizza & Beer opened December 2, 2024 at 6358 Del Cerro Boulevard — the Windmill Farms plaza space that previously housed El Torry.",
       "Co-owners Zee and Sadeer bring New York-style pies meant to fold, plus wings, garlic knots, salads, and beer on tap. The dining room and patio make it an easy walk-over for neighbors who already treat Del Cerro Boulevard as the neighborhood living room.",
       "Hours typically run Monday–Thursday 11am–8:30pm, Friday–Saturday 11am–9:30pm, and Sunday 11am–8pm. Delivery covers Del Cerro, San Carlos, Allied Gardens, Grantville, the College Area, and nearby La Mesa. More at delcerropizzas.com or (619) 287-8541.",
-    ],
-  },
-  {
-    slug: "2025-san-cerro-turkey-trot",
-    title: "2025 San Cerro Turkey Trot",
-    date: "2025-11-19",
-    category: "events",
-    categoryLabel: "Events",
-    excerpt:
-      "Thanksgiving morning 5K — run, walk, bike, or scoot. Bring a canned good for the Food Bank.",
-    image: "/images/turkey-trot-2025.png",
-    body: [
-      "Join us Thanksgiving morning for the San Cerro Turkey Trot — a neighborhood 5K you can run, walk, bike, or scoot.",
-      "The course starts and ends at the corner of Wandermere Drive and Belle Glade Avenue. Arrive by 8:00; the race begins at 8:30.",
-      "Prizes go to the fastest man, woman, stroller, girl (under 12), boy (under 12), and best dressed.",
-      "Bring canned goods to donate — human or pet food. The food drive benefits the San Diego Food Bank via Pershing Middle School.",
     ],
   },
   {
