@@ -90,65 +90,18 @@ export const posts: Post[] = [
     ],
   },
   {
-    slug: "navajo-community-planners-meeting",
-    title: "Navajo Community Planning Group",
-    date: "2026-11-12",
-    category: "community",
-    categoryLabel: "Community",
-    excerpt:
-      "Land-use meeting for Del Cerro, San Carlos, Allied Gardens, and Grantville — next session Nov 12 at Flood Church.",
-    image: "/images/navajo-planners-meeting.jpg",
-    featured: true,
-    featuredOrder: 2,
-    body: [
-      "The Navajo Community Planning Group advises the City of San Diego on land-use items for Allied Gardens, Del Cerro, Grantville, and San Carlos.",
-      "Meetings are the second Thursday of the month, 6:30–8:30pm, in the Flood Church Community Room at 4772 Alvarado Canyon Road, San Diego 92120. August and December are dark unless a special meeting is called.",
-      "The October 8, 2026 meeting has already been held. The next meeting is Thursday, November 12, 2026. Agendas and minutes: https://www.sandiego.gov/planning/community-plans/navajo/planning-group",
-    ],
-  },
-  {
-    slug: "bulls-only-rodeo-2026",
-    title: "Oct 9 Bulls Only Rodeo",
-    date: "2026-10-09",
+    slug: "westwind-brass-mission-trails-2026",
+    title: "Westwind Brass finale at Mission Trails",
+    date: "2026-11-18",
     category: "events",
     categoryLabel: "Events",
     excerpt:
-      "Bull riding, Jr. Bull Riding, and Mutton Bustin’ at Lakeside Rodeo Arena — Oct 9–10, shows at 7:30pm.",
-    image: "/images/bulls-only-rodeo-2026.jpg",
+      "Free Saturday, Dec. 5 concert at the Visitor Center amphitheater, with Patrick Henry High School brass.",
+    image: "/images/cowles-mountain.jpg",
     body: [
-      "Bulls Only Rodeo returns to the Lakeside Rodeo Arena on Friday, October 9 and Saturday, October 10, 2026. Shows start at 7:30pm; gates open at 5:30pm.",
-      "Expect IPRA-sanctioned bull riding plus Jr. Bull Riding and Mutton Bustin’. The event is produced with the Lakeside Optimist Club to support local youth programs.",
-      "Tickets are sold at Boot Barn (El Cajon and Kearny Mesa) and the Lakeside Rodeo Arena box office (12584 Mapleview St). More at https://bullsonlyrodeo.com/",
-    ],
-  },
-  {
-    slug: "el-cajon-oktoberfest-2026",
-    title: "El Cajon Oktoberfest returns for two weekends",
-    date: "2026-09-25",
-    category: "events",
-    categoryLabel: "Events",
-    excerpt:
-      "German food, bier, music, and Kid Zone fun at 1017 S. Mollison — Sept 25–27 and Oct 2–4.",
-    image: "/images/el-cajon-oktoberfest.jpg",
-    body: [
-      "Oktoberfest in El Cajon, hosted by the German American Societies of San Diego, runs two weekends in 2026: September 25–27 and October 2–4 at 1017 S. Mollison Ave.",
-      "Expect bratwurst, ox-on-the-spit, pretzels, German bier, folk dancing, contests, shopping booths, and a Kid Zone. Typical hours are Fridays 4–10pm, Saturdays 12–10pm, and Sundays 12–9pm. Adult admission is usually $15 Fridays/Saturdays and $5 Sundays; under 21 and active military are free.",
-      "Details and listings: https://www.falkorevents.com/eventcal/event/6829/details/ — also see germanclubsandiego.com for club updates.",
-    ],
-  },
-  {
-    slug: "la-mesa-oktoberfest-2026",
-    title: "La Mesa Oktoberfest hits the boulevard",
-    date: "2026-10-02",
-    category: "events",
-    categoryLabel: "Events",
-    excerpt:
-      "Free all-ages fest on La Mesa Blvd — Oct 2–4, with biergarten entry and VIP packages at the door.",
-    image: "/images/la-mesa-oktoberfest.jpg",
-    body: [
-      "La Mesa Oktoberfest brings Bavarian festivities to La Mesa Blvd for its 53rd anniversary weekend: Friday, Oct 2 (4–10pm), Saturday, Oct 3 (10am–10pm), and Sunday, Oct 4 (12–8pm).",
-      "The street festival is free and all ages. Biergarten entry is about $8 at the door (under 21 free), with Hofbräuhaus VIP packages available. Think German bier, food, games, dancing, dachshund races, and kids’ activities.",
-      "More info and VIP options: https://www.lamesaoktoberfest.org/",
+      "Westwind Brass closes the Mission Trails Concerts in the Park series on Saturday, December 5, 2026, from 2:00 to 3:30pm.",
+      "The free show is in the outdoor amphitheater at the Visitor Center, 1 Father Junipero Serra Trail, San Diego 92119. The program is holiday and seasonal brass, with musicians from Patrick Henry High School.",
+      "The city event page, KPBS, and Westwind Brass all list the same time and place. Details: https://www.sandiego.gov/event/concerts-park-mission-trails-regional-park-1",
     ],
   },
   {
@@ -161,27 +114,11 @@ export const posts: Post[] = [
       "NY-style pies and beer on tap land in the old El Torry space at Windmill Farms plaza.",
     image: "/images/del-cerro-pizza-storefront.webp",
     featured: true,
-    featuredOrder: 3,
+    featuredOrder: 2,
     body: [
       "Del Cerro Pizza & Beer opened December 2, 2024 at 6358 Del Cerro Boulevard — the Windmill Farms plaza space that previously housed El Torry.",
       "Co-owners Zee and Sadeer bring New York-style pies meant to fold, plus wings, garlic knots, salads, and beer on tap. The dining room and patio make it an easy walk-over for neighbors who already treat Del Cerro Boulevard as the neighborhood living room.",
       "Hours typically run Monday–Thursday 11am–8:30pm, Friday–Saturday 11am–9:30pm, and Sunday 11am–8pm. Delivery covers Del Cerro, San Carlos, Allied Gardens, Grantville, the College Area, and nearby La Mesa. More at delcerropizzas.com or (619) 287-8541.",
-    ],
-  },
-  {
-    slug: "2025-san-cerro-turkey-trot",
-    title: "2025 San Cerro Turkey Trot",
-    date: "2025-11-19",
-    category: "events",
-    categoryLabel: "Events",
-    excerpt:
-      "Thanksgiving morning 5K — run, walk, bike, or scoot. Bring a canned good for the Food Bank.",
-    image: "/images/turkey-trot-2025.png",
-    body: [
-      "Join us Thanksgiving morning for the San Cerro Turkey Trot — a neighborhood 5K you can run, walk, bike, or scoot.",
-      "The course starts and ends at the corner of Wandermere Drive and Belle Glade Avenue. Arrive by 8:00; the race begins at 8:30.",
-      "Prizes go to the fastest man, woman, stroller, girl (under 12), boy (under 12), and best dressed.",
-      "Bring canned goods to donate — human or pet food. The food drive benefits the San Diego Food Bank via Pershing Middle School.",
     ],
   },
   {
