@@ -71,7 +71,7 @@ export default function HomePage() {
           <div className="section-head reveal">
             <h2>What neighbors are talking about</h2>
             <p>
-              Turkey Trot 2026, the Navajo planning group, and boulevard pizza.
+              Thanksgiving Turkey Trot, Christmas on Mt. Helix, and boulevard pizza.
             </p>
           </div>
           <div className="featured-grid">
