@@ -11,6 +11,16 @@ export type Place = {
 
 export const places: Place[] = [
   {
+    name: "Trattoria Ciccio",
+    kind: "restaurant",
+    address: "8622 Lake Murray Blvd, San Diego, CA 92119",
+    blurb:
+      "Sicilian trattoria from the Aromi / Trattoria da Sofia team in the former Sobremesa space — pastas, pinsas, and a kids’ play area. Opens November 27, 2026.",
+    href: "https://sandiegomagazine.com/food-drink/sobremesa-closes-making-way-for-a-new-italian-restaurant-in-san-diego/",
+    opened: "2026-11-27",
+    status: "new",
+  },
+  {
     name: "Del Cerro Pizza & Beer",
     kind: "restaurant",
     address: "6358 Del Cerro Blvd, San Diego, CA 92120",
@@ -19,7 +29,7 @@ export const places: Place[] = [
     href: "https://delcerropizzas.com/",
     phone: "(619) 287-8541",
     opened: "2024-12-02",
-    status: "new",
+    status: "staple",
   },
   {
     name: "KnB Bistro & Bottle Shop",

@@ -79,6 +79,19 @@ export const calendarEvents: CalendarEvent[] = [
     ics: true,
   },
   {
+    id: "trattoria-ciccio-opening",
+    title: "Trattoria Ciccio opens",
+    summary:
+      "Sicilian trattoria from the Aromi / Trattoria da Sofia team opens in the former Sobremesa space. Pastas, pinsas, kids’ play area. Initial hours 3–9:30pm daily; happy hour 3–5pm Sun–Thu.",
+    where: "8622 Lake Murray Blvd, San Diego",
+    start: "2026-11-27T15:00:00",
+    end: "2026-11-27T21:30:00",
+    href: "/blog/trattoria-ciccio-opens",
+    status: "upcoming",
+    category: "opening",
+    ics: true,
+  },
+  {
     id: "mtrp-concert-westwind-2026",
     title: "Concerts in the Park: Westwind Brass",
     summary:

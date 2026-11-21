@@ -71,7 +71,7 @@ export default function HomePage() {
           <div className="section-head reveal">
             <h2>What neighbors are talking about</h2>
             <p>
-              Thanksgiving Turkey Trot, Christmas on Mt. Helix, and boulevard pizza.
+              Thanksgiving Turkey Trot, Christmas on Mt. Helix, and Trattoria Ciccio.
             </p>
           </div>
           <div className="featured-grid">

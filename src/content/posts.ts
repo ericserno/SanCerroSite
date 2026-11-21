@@ -107,6 +107,24 @@ export const posts: Post[] = [
     ],
   },
   {
+    slug: "trattoria-ciccio-opens",
+    title: "Trattoria Ciccio opens on Lake Murray Blvd",
+    date: "2026-11-27",
+    category: "food-and-drink",
+    categoryLabel: "Food & Drink",
+    excerpt:
+      "The Aromi team turns the former Sobremesa space into a Sicilian trattoria — pastas, pinsas, and a kids’ play room. Opens Nov 27.",
+    image: "/images/trattoria-ciccio.jpg",
+    featured: true,
+    featuredOrder: 3,
+    body: [
+      "Trattoria Ciccio opens Friday, November 27, 2026 at 8622 Lake Murray Boulevard in San Carlos — the 5,000-square-foot space that previously housed Sobremesa.",
+      "Andrea Carbonaro and family partners (including co-owner/chef Francesco “Ciccio” Mancino) are the team behind Aromi Italian Cuisine and Trattoria da Sofia. The remodel leans classic trattoria: red-and-white striped awnings, olive accents, and a fountain in the dining room.",
+      "Expect comforting pastas (spicy vodka, gnocchi cacio e pepe, braised beef ragù lasagna), shareables like stuffed zucchini blossoms, Roman-style pinsa flatbreads, and heartier plates such as brasato. There’s a dedicated kids’ play area so families can settle in.",
+      "Initial hours: 3–9:30pm daily, with happy hour 3–5pm Sunday–Thursday (subject to change). Coverage: https://sandiegomagazine.com/food-drink/sobremesa-closes-making-way-for-a-new-italian-restaurant-in-san-diego/",
+    ],
+  },
+  {
     slug: "del-cerro-pizza-and-beer-opens",
     title: "Del Cerro Pizza & Beer opens on the boulevard",
     date: "2024-12-02",
@@ -115,8 +133,6 @@ export const posts: Post[] = [
     excerpt:
       "NY-style pies and beer on tap land in the old El Torry space at Windmill Farms plaza.",
     image: "/images/del-cerro-pizza-storefront.webp",
-    featured: true,
-    featuredOrder: 3,
     body: [
       "Del Cerro Pizza & Beer opened December 2, 2024 at 6358 Del Cerro Boulevard — the Windmill Farms plaza space that previously housed El Torry.",
       "Co-owners Zee and Sadeer bring New York-style pies meant to fold, plus wings, garlic knots, salads, and beer on tap. The dining room and patio make it an easy walk-over for neighbors who already treat Del Cerro Boulevard as the neighborhood living room.",

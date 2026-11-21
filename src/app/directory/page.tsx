@@ -39,7 +39,7 @@ export default function DirectoryPage() {
           <h1>San Cerro directory</h1>
           <p>
             A short list of boulevard staples, schools, parks, and the newest
-            opening — Del Cerro Pizza & Beer.
+            opening — Trattoria Ciccio on Lake Murray Blvd.
           </p>
         </div>
       </section>
