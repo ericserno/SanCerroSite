@@ -102,8 +102,53 @@ export const posts: Post[] = [
     featuredOrder: 2,
     body: [
       "Christmas on Mt. Helix returns Saturday, December 5, 2026, from 3–8pm at Mt. Helix Park (4901 Mt. Helix Dr, La Mesa).",
-      "Expect a Christmas market, food, hot chocolate, kids’ crafts, Santa photos, and caroling. General parking is at Grossmont High School’s lower lot, 1100 Murray Dr, with shuttles to the peak.",
+      "Expect a Christmas market, food, hot chocolate, kids’ crafts, Santa photos, and caroling. General parking is at Grossmont High School’s lower lot, 1100 Murray Dr, El Cajon, with shuttles to the peak.",
       "More info: https://www.mthelixpark.org/christmas",
+    ],
+  },
+  {
+    slug: "concerts-in-the-park-westwind-2026",
+    title: "Westwind Brass at Mission Trails",
+    date: "2026-12-05",
+    category: "events",
+    categoryLabel: "Events",
+    excerpt:
+      "Free Dec 5 concert at the Visitor Center amphitheater — Westwind Brass and Patrick Henry High School, 2:00–3:30pm.",
+    image: "/images/cowles-mountain.jpg",
+    body: [
+      "Concerts in the Park closes the season Saturday, December 5, 2026, from 2:00–3:30pm at the Mission Trails Visitor Center outdoor amphitheater (1 Father Junipero Serra Trail, San Diego 92119).",
+      "Westwind Brass plays holiday and seasonal favorites with brass musicians from Patrick Henry High School. The concert is free.",
+      "City listing: https://www.sandiego.gov/event/concerts-park-mission-trails-regional-park-1",
+    ],
+  },
+  {
+    slug: "sancarlos-kids-night-out-2026",
+    title: "Kids Night Out at San Carlos",
+    date: "2026-12-04",
+    category: "events",
+    categoryLabel: "Events",
+    excerpt:
+      "Friday, Dec 4, 4:00–7:30pm at San Carlos Rec Center — North Pole games, crafts, dinner, and a movie for ages 5–12.",
+    image: "/images/recreation-thumb.jpg",
+    body: [
+      "San Carlos Recreation Center lists a Kids Night Out for Friday, December 4, 2026, from 4:00–7:30pm in the gym at 6445 Lake Badin Ave.",
+      "Ages 5–12. The theme is the North Pole: holiday games, crafts, prizes, dinner, and a movie. Tell staff about any dietary restrictions.",
+      "Register on SDRecConnect. The activity page has said online registration may not be open yet, so call the center at (619) 527-3443 if the listing is not taking signups. https://www.sandiego.gov/park-and-recreation/centers/recctr/sancarlos",
+    ],
+  },
+  {
+    slug: "allied-gardens-cookie-decorating-2026",
+    title: "Cookie Decorating Party at Allied Gardens",
+    date: "2026-12-19",
+    category: "events",
+    categoryLabel: "Events",
+    excerpt:
+      "Saturday, Dec 19, 10am–noon at Allied Gardens Rec Center — cookies, jumpers, face painters, a DJ, and a photobooth.",
+    image: "/images/recreation-thumb.jpg",
+    body: [
+      "Allied Gardens Recreation Center is hosting a Cookie Decorating Party on Saturday, December 19, 2026, from 10:00am to noon at 5155 Greenbrier Ave.",
+      "The center’s listing includes cookie decorating, jumpers, face painters, a DJ, and a photobooth.",
+      "Details: https://www.sandiego.gov/park-and-recreation/centers/recctr/allied",
     ],
   },
   {
@@ -137,21 +182,6 @@ export const posts: Post[] = [
       "Del Cerro Pizza & Beer opened December 2, 2024 at 6358 Del Cerro Boulevard — the Windmill Farms plaza space that previously housed El Torry.",
       "Co-owners Zee and Sadeer bring New York-style pies meant to fold, plus wings, garlic knots, salads, and beer on tap. The dining room and patio make it an easy walk-over for neighbors who already treat Del Cerro Boulevard as the neighborhood living room.",
       "Hours typically run Monday–Thursday 11am–8:30pm, Friday–Saturday 11am–9:30pm, and Sunday 11am–8pm. Delivery covers Del Cerro, San Carlos, Allied Gardens, Grantville, the College Area, and nearby La Mesa. More at delcerropizzas.com or (619) 287-8541.",
-    ],
-  },
-  {
-    slug: "navajo-community-planners-meeting",
-    title: "Navajo Community Planning Group",
-    date: "2026-11-12",
-    category: "community",
-    categoryLabel: "Community",
-    excerpt:
-      "Land-use meetings for Allied Gardens, Del Cerro, Grantville, and San Carlos — second Thursday at Flood Church.",
-    image: "/images/navajo-planners-meeting.jpg",
-    body: [
-      "The Navajo Community Planning Group advises the City of San Diego on land-use items for Allied Gardens, Del Cerro, Grantville, and San Carlos.",
-      "Meetings are the second Thursday of the month, 6:30–8:30pm, in the Flood Church Community Room at 4772 Alvarado Canyon Road, San Diego 92120. August and December are dark unless a special meeting is called.",
-      "The November 12, 2026 meeting has already been held. Check navajoplanners.org or the city planning page for the next agenda: https://www.sandiego.gov/planning/community-plans/navajo/planning-group",
     ],
   },
   {
